@@ -98,9 +98,16 @@ ways to keep it fresh, in increasing order of effort:
 | `public/images/news/` | Event photography, referenced by `image` in `news.json` |
 | `public/images/papers/` | Publication figures, referenced by `figure` on a publication |
 
-News items carry `imageKind: "masthead"` when the image is a journal title block
-on white paper. The UI then frames it as a document instead of bleeding it into
-the dark layout.
+News items carry `imageKind: "figure"` when the image is a paper artifact on a
+white ground, a journal title block or a diagram. The UI frames those as a
+document rather than bleeding them into the dark layout. Event photography uses
+`"photo"` and is cropped to fill.
+
+A news item that announces a paper does not need its own image. If its `href` is
+`/publications#<id>` and that publication has a `figure`, the news card inherits
+it, so the figure lives in exactly one place and the two cannot drift apart. An
+explicit `image` on the news item still wins, which is how the one paper with a
+title block but no figure keeps it.
 
 ### Publication figures
 

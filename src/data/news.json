@@ -67,9 +67,7 @@
     "tracks": [
       "wireless"
     ],
-    "href": "/publications#J6",
-    "image": "/images/papers/J6.png",
-    "imageKind": "masthead"
+    "href": "/publications#J6"
   },
   {
     "id": "n19",
@@ -83,9 +81,7 @@
       "efficient-ml"
     ],
     "href": "/publications#J8",
-    "featured": true,
-    "image": "/images/papers/J8.png",
-    "imageKind": "masthead"
+    "featured": true
   },
   {
     "id": "n13",
@@ -96,9 +92,7 @@
     "tracks": [
       "generative"
     ],
-    "href": "/publications#J7",
-    "image": "/images/papers/J7.png",
-    "imageKind": "masthead"
+    "href": "/publications#J7"
   },
   {
     "id": "n12",
@@ -111,7 +105,7 @@
     ],
     "href": "/publications#J5",
     "image": "/images/papers/J5.png",
-    "imageKind": "masthead"
+    "imageKind": "figure"
   },
   {
     "id": "n11",

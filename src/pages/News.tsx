@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Section from '@/components/ui/Section'
 import TrackBadge from '@/components/ui/TrackBadge'
-import { news } from '@/lib/content'
+import { news, newsImage } from '@/lib/content'
 import { formatNewsDate } from '@/lib/format'
 import type { NewsCategory, NewsItem } from '@/types/content'
 import { assetUrl } from '@/lib/assets'
@@ -58,6 +58,9 @@ export default function News() {
 }
 
 function NewsCard({ item }: { item: NewsItem }) {
+  // Either the item's own image, or the figure from the paper it announces.
+  const image = newsImage(item)
+
   const body = (
     <>
       <p className="font-mono text-xs text-slate-600">
@@ -86,16 +89,17 @@ function NewsCard({ item }: { item: NewsItem }) {
     <li>
       <article
         className={`group overflow-hidden rounded-xl border border-ink-700/60 bg-ink-900/40 transition-colors hover:border-ink-600 ${
-          item.image ? 'grid sm:grid-cols-[16rem_minmax(0,1fr)]' : ''
+          image ? 'grid sm:grid-cols-[16rem_minmax(0,1fr)]' : ''
         }`}
       >
-        {item.image &&
-          (item.imageKind === 'masthead' ? (
-            // Journal title blocks are black-on-white. Framed as paper so they
-            // read as a document rather than a hole in the layout.
+        {image &&
+          (image.kind === 'figure' ? (
+            // Paper artifacts, title blocks and diagrams alike, are
+            // black-on-white. Framed as a document rather than a hole in the
+            // dark layout, and contained so nothing is cropped.
             <div className="paper flex items-center p-4 sm:p-5">
               <img
-                src={assetUrl(item.image)}
+                src={assetUrl(image.src)}
                 alt=""
                 loading="lazy"
                 className="w-full object-contain"
@@ -104,7 +108,7 @@ function NewsCard({ item }: { item: NewsItem }) {
           ) : (
             <div className="aspect-video overflow-hidden bg-ink-850 sm:aspect-auto">
               <img
-                src={assetUrl(item.image)}
+                src={assetUrl(image.src)}
                 alt=""
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"

@@ -112,10 +112,12 @@ export interface NewsItem {
   href?: string
   image?: string
   /**
-   * 'masthead' images are journal title blocks on white paper, so the UI frames
-   * them as a document rather than bleeding them into the dark layout.
+   * How to present the image. A 'figure' is a paper artifact on a white ground,
+   * a journal title block or an architecture diagram, so the UI frames it as a
+   * document rather than bleeding it into the dark layout. News items that
+   * announce a paper inherit that paper's figure and this kind automatically.
    */
-  imageKind?: 'photo' | 'masthead'
+  imageKind?: 'photo' | 'figure'
   /** Surface on the Home ticker. */
   featured?: boolean
 }
