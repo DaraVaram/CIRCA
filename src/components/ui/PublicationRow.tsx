@@ -101,8 +101,27 @@ export default function PublicationRow({ publication }: { publication: Publicati
       </div>
 
       {publication.figure && (
-        <figure className="paper mt-4 max-w-lg overflow-hidden rounded-lg border border-ink-700/60 p-3">
-          <img src={assetUrl(publication.figure)} alt="" loading="lazy" className="w-full object-contain" />
+        // Fixed aspect on a paper ground. The build normalizes every figure to
+        // the same canvas, and pinning the ratio here keeps the list aligned
+        // even if one is later replaced by a differently shaped file. Diagrams
+        // are not legible at this size, so the card opens the full image.
+        <figure className="mt-4 w-full max-w-md">
+          <a
+            href={assetUrl(publication.figure)}
+            target="_blank"
+            rel="noreferrer"
+            className="group/fig paper relative block aspect-3/1 overflow-hidden rounded-lg border border-ink-700/60 transition-colors hover:border-signal-500/60"
+          >
+            <img
+              src={assetUrl(publication.figure)}
+              alt={`Figure from ${publication.title}`}
+              loading="lazy"
+              className="h-full w-full object-contain"
+            />
+            <span className="absolute right-2 bottom-2 rounded bg-ink-950/70 px-1.5 py-0.5 font-mono text-[9px] tracking-wider text-slate-300 uppercase opacity-0 transition-opacity group-hover/fig:opacity-100">
+              Open full size
+            </span>
+          </a>
         </figure>
       )}
     </li>

@@ -12,7 +12,8 @@
     "year": null,
     "tracks": [
       "optimization"
-    ]
+    ],
+    "figure": "/images/papers/J15.webp"
   },
   {
     "id": "J14",
@@ -30,7 +31,8 @@
     "tracks": [
       "generative",
       "efficient-ml"
-    ]
+    ],
+    "figure": "/images/papers/J14.webp"
   },
   {
     "id": "J13",
@@ -64,7 +66,8 @@
     "year": null,
     "tracks": [
       "efficient-ml"
-    ]
+    ],
+    "figure": "/images/papers/J12.webp"
   },
   {
     "id": "J11",
@@ -102,7 +105,8 @@
       "wireless"
     ],
     "doi": "10.1109/jiot.2026.3710680",
-    "url": "https://doi.org/10.1109/jiot.2026.3710680"
+    "url": "https://doi.org/10.1109/jiot.2026.3710680",
+    "figure": "/images/papers/J10.webp"
   },
   {
     "id": "J9",
@@ -121,7 +125,8 @@
       "applied"
     ],
     "doi": "10.1007/s10032-026-00596-4",
-    "url": "https://doi.org/10.1007/s10032-026-00596-4"
+    "url": "https://doi.org/10.1007/s10032-026-00596-4",
+    "figure": "/images/papers/J9.webp"
   },
   {
     "id": "J8",
@@ -139,7 +144,7 @@
       "wireless",
       "efficient-ml"
     ],
-    "figure": "/images/papers/J8.png",
+    "figure": "/images/papers/J8.webp",
     "doi": "10.1109/lcomm.2025.3582680",
     "url": "https://doi.org/10.1109/lcomm.2025.3582680"
   },
@@ -159,7 +164,7 @@
     "tracks": [
       "generative"
     ],
-    "figure": "/images/papers/J7.png",
+    "figure": "/images/papers/J7.webp",
     "doi": "10.1109/access.2025.3602733",
     "url": "https://doi.org/10.1109/access.2025.3602733"
   },
@@ -179,7 +184,7 @@
     "tracks": [
       "wireless"
     ],
-    "figure": "/images/papers/J6.png",
+    "figure": "/images/papers/J6.webp",
     "doi": "10.1109/lawp.2025.3576149",
     "url": "https://doi.org/10.1109/lawp.2025.3576149"
   },
@@ -200,7 +205,6 @@
     "tracks": [
       "wireless"
     ],
-    "figure": "/images/papers/J5.png",
     "doi": "10.1109/ojcoms.2025.3556887",
     "url": "https://doi.org/10.1109/ojcoms.2025.3556887"
   },

@@ -8,10 +8,13 @@ never hardcode it.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
+npm run dev        # http://localhost:5173/CIRCA/
 npm run build      # typecheck + production build to dist/
 npm run typecheck
 ```
+
+The dev server serves from `/CIRCA/` too, matching production, so path bugs
+surface locally rather than at deploy time.
 
 ## Where to edit content
 
@@ -93,11 +96,28 @@ ways to keep it fresh, in increasing order of effort:
 | `public/images/members/` | Square member photos, referenced by `photo` in `members.json` |
 | `public/images/pi/` | Principal investigator portraits |
 | `public/images/news/` | Event photography, referenced by `image` in `news.json` |
-| `public/images/papers/` | Journal mastheads and figures, referenced by `figure` on a publication |
+| `public/images/papers/` | Publication figures, referenced by `figure` on a publication |
 
-News items and publications carry `imageKind: "masthead"` when the image is a
-journal title block on white paper. The UI then frames it as a document instead
-of bleeding it into the dark layout.
+News items carry `imageKind: "masthead"` when the image is a journal title block
+on white paper. The UI then frames it as a document instead of bleeding it into
+the dark layout.
+
+### Publication figures
+
+Source images live in `PublicationPictures/` and are a mix of architecture
+diagrams and journal title pages, at very different sizes and aspect ratios. The
+optimizer scales each one to fit a single fixed canvas and centers it on white,
+so every output is identically 1400x467 and the figure cards down the publication
+list cannot drift out of alignment. Nothing is cropped.
+
+```bash
+python scripts/optimize-figures.py
+```
+
+To add a figure, drop the image in `PublicationPictures/` and add a line to
+`MAPPING` in the script, keyed by publication id. The script reports anything
+unmapped. Figures are optional: publications without one simply render without,
+which is the case for the older papers and most of those under review.
 
 ## Adding a person
 

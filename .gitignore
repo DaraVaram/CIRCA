@@ -10,5 +10,13 @@ dist
 Website.zip
 extracted/
 # Leading slash anchors this to the repo root. Without it the pattern also
-# matches public/images/pi/mohamed-alhajri.jpg, which the site needs.
+# matches public/images/pi/mohamed-alhajri.jpg
+
+# Source figures, 17 MB of originals. scripts/optimize-figures.py turns these
+# into the 1400x467 webp files under public/images/papers/, which are committed.
+PublicationPictures/, which the site needs.
 /mohamed-alhajri.jpg
+
+# Source figures, 17 MB of originals. scripts/optimize-figures.py turns these
+# into the 1400x467 webp files under public/images/papers/, which are committed.
+PublicationPictures/
