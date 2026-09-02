@@ -179,12 +179,38 @@ python scripts/check-copy.py
 
 ## Deployment
 
-The build is a static SPA in `dist/`. It uses `BrowserRouter`, so the host must
-rewrite unknown paths to `index.html`:
+Live at **https://daravaram.github.io/CIRCA/**
 
-- **Vercel and Netlify** work out of the box.
-- **GitHub Pages** needs a `404.html` copy of `index.html`, or switch
-  `BrowserRouter` to `HashRouter` in `src/main.tsx`, a one-line change.
+Every push to `main` triggers `.github/workflows/deploy.yml`, which typechecks,
+builds, runs the house style check, and publishes `dist/` to GitHub Pages. A
+failing typecheck or style check fails the deploy rather than shipping.
+
+### Serving from a subpath
+
+The site lives at `/CIRCA/`, not the domain root, which three things depend on:
+
+- `vite.config.ts` sets `base` to `/CIRCA/`. Override it with the `BASE_PATH`
+  environment variable, for example `BASE_PATH=/ npm run build` for a custom
+  domain.
+- `src/main.tsx` passes `import.meta.env.BASE_URL` to the router as `basename`.
+- `src/lib/assets.ts` exports `assetUrl()`, which joins the base onto the
+  site-absolute image paths stored in the data files. **Any new `<img>` fed from
+  JSON must go through it**, or it will 404 on the deployed subpath.
+
+The absolute URLs in the `og:` meta tags in `index.html` are not rewritten by
+the build, so update them by hand if the domain changes.
+
+### The 404 status on deep links
+
+GitHub Pages has no SPA rewrite. The build copies `index.html` to `404.html`, so
+a deep link like `/CIRCA/people` loads and renders correctly, but the HTTP status
+is 404, which crawlers see. Options, in order of effort:
+
+1. Leave it. Users are unaffected, and this is what most SPAs on Pages do.
+2. Switch `BrowserRouter` to `HashRouter` in `src/main.tsx`. Correct statuses,
+   uglier URLs (`/CIRCA/#/people`).
+3. Move to a host with real rewrites. Vercel and Netlify both handle this out of
+   the box and would also allow a custom domain with `BASE_PATH=/`.
 
 ## Content still needed
 
