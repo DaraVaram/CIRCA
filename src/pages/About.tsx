@@ -39,7 +39,17 @@ export default function About() {
           <aside className="space-y-6">
             <div className="rounded-xl border border-ink-700/60 bg-ink-900/40 p-6">
               <p className="eyebrow">Track record</p>
-              <dl className="mt-4 space-y-3 text-sm">
+              <dl className="mt-4 space-y-3.5 text-sm">
+                <Stat
+                  label="Graduate students"
+                  value={impact.gradStudents}
+                  hint={`${impact.gradStudentsCurrent} current, ${impact.gradStudentsAlumni} alumni`}
+                />
+                <Stat
+                  label="Joint publications"
+                  value={impact.groupAuthored}
+                  hint={`Two or more group members. ${impact.groupAuthoredPublished} published, ${impact.groupAuthoredUnderReview} under review.`}
+                />
                 <Stat label="Capstone projects" value={impact.capstoneProjects} />
                 <Stat label="Award-winning projects" value={impact.awardedProjects} />
                 <Stat label="Industry-sponsored" value={impact.industrySponsored} />
@@ -127,11 +137,14 @@ export default function About() {
   )
 }
 
-function Stat({ label, value }: { label: string; value: number }) {
+function Stat({ label, value, hint }: { label: string; value: number; hint?: string }) {
   return (
-    <div className="flex items-baseline justify-between border-b border-ink-800 pb-2">
-      <dt className="text-slate-500">{label}</dt>
-      <dd className="font-mono text-slate-100 tabular-nums">{value}</dd>
+    <div className="border-b border-ink-800 pb-2.5">
+      <div className="flex items-baseline justify-between gap-3">
+        <dt className="text-slate-500">{label}</dt>
+        <dd className="font-mono text-slate-100 tabular-nums">{value}</dd>
+      </div>
+      {hint && <p className="mt-1 text-[11px] leading-relaxed text-slate-600">{hint}</p>}
     </div>
   )
 }

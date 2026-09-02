@@ -8,6 +8,8 @@ import {
   collaborators,
   currentMembers,
   members,
+  memberForAuthor,
+  pi,
   projects,
   publications,
   scholar,
@@ -70,11 +72,34 @@ export const metrics: Metric[] = [
   },
 ]
 
-/** Secondary numbers used on About / Contact for the industry-facing story. */
+/**
+ * Publications the group wrote together: the PI plus at least one other member
+ * on the same paper. This is the measure of internal collaboration rather than
+ * of the PI's output, so a paper the PI wrote with external co-authors alone
+ * does not count.
+ */
+const groupAuthored = publications.filter((p) => {
+  const onPaper = p.authors.map(memberForAuthor).filter(Boolean)
+  if (!onPaper.some((m) => m?.slug === pi.slug)) return false
+  return onPaper.length >= 2
+})
+
+/** Everyone supervised at graduate level, current and alumni, excluding the PI. */
+const gradStudents = members.filter((m) => m.role === 'phd' || m.role === 'msc')
+
+/** Secondary numbers used on About and Contact for the industry-facing story. */
 export const impact = {
   capstoneProjects: projects.length,
   awardedProjects: projects.filter((p) => p.awards.length > 0).length,
   industrySponsored: projects.filter((p) => p.industrySponsor).length,
   studentsSupervised: new Set(projects.flatMap((p) => p.students)).size,
   underReview: publications.filter((p) => p.status === 'submitted').length,
+
+  gradStudents: gradStudents.length,
+  gradStudentsCurrent: gradStudents.filter((m) => m.status === 'current').length,
+  gradStudentsAlumni: gradStudents.filter((m) => m.status === 'alumni').length,
+
+  groupAuthored: groupAuthored.length,
+  groupAuthoredPublished: groupAuthored.filter((p) => p.status === 'published').length,
+  groupAuthoredUnderReview: groupAuthored.filter((p) => p.status === 'submitted').length,
 }
