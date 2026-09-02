@@ -1,0 +1,635 @@
+[
+  {
+    "id": "J15",
+    "kind": "journal",
+    "status": "submitted",
+    "title": "Not All Objectives Are Born Equal: Priority-Constrained Descent for Hierarchical Multi-Objective Optimization",
+    "authors": [
+      "Dara Varam",
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "Transactions on Machine Learning Research",
+    "year": null,
+    "tracks": [
+      "optimization"
+    ]
+  },
+  {
+    "id": "J14",
+    "kind": "journal",
+    "status": "submitted",
+    "title": "LP-NeRV: Layered-Precision Scalability for Neural Video Representations",
+    "authors": [
+      "Ihab Amer",
+      "Muhammad Hannan",
+      "Dara Varam",
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "IEEE Transactions on Multimedia",
+    "year": null,
+    "tracks": [
+      "generative",
+      "efficient-ml"
+    ]
+  },
+  {
+    "id": "J13",
+    "kind": "journal",
+    "status": "submitted",
+    "title": "Design, Analysis, and SDR Validation of µ-Law-Companded RPDM for Low-PAPR Transmission in Consumer Wireless Devices",
+    "authors": [
+      "Shaik Basheeruddin Shah",
+      "Nazar T. Ali",
+      "Ubaid Ahmad",
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "IEEE Transactions on Consumer Electronics",
+    "year": null,
+    "tracks": [
+      "wireless"
+    ]
+  },
+  {
+    "id": "J12",
+    "kind": "journal",
+    "status": "submitted",
+    "title": "Neural Network Quantization for Microcontrollers: A Comprehensive Survey of Methods, Platforms, and Applications",
+    "authors": [
+      "Hamza A. Abushahla",
+      "Dara Varam",
+      "Ariel Justine N. Panopio",
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "IEEE Access",
+    "year": null,
+    "tracks": [
+      "efficient-ml"
+    ]
+  },
+  {
+    "id": "J11",
+    "kind": "journal",
+    "status": "submitted",
+    "title": "On the Combinatorial Vulnerability of Access Points in Wi-Fi Fingerprinting: Characterization and Efficient Identification",
+    "authors": [
+      "Muhammed Noshin",
+      "Muhammed Hannan",
+      "Mohamed I. AlHajri",
+      "Mohammad Zulkernine"
+    ],
+    "venue": "IEEE Access",
+    "year": null,
+    "tracks": [
+      "wireless",
+      "applied"
+    ]
+  },
+  {
+    "id": "J10",
+    "kind": "journal",
+    "status": "published",
+    "title": "Sub-Millisecond, Microjoule Edge Inference for Indoor Environment Identification via Layer-Wise Mixed-Precision Quantization",
+    "authors": [
+      "Hamza A. Abushahla",
+      "Muhammed Noshin",
+      "Mohamed I. AlHajri",
+      "Nazar T. Ali"
+    ],
+    "venue": "IEEE Internet of Things Journal",
+    "year": 2026,
+    "tracks": [
+      "efficient-ml",
+      "wireless"
+    ],
+    "doi": "10.1109/jiot.2026.3710680",
+    "url": "https://doi.org/10.1109/jiot.2026.3710680"
+  },
+  {
+    "id": "J9",
+    "kind": "journal",
+    "status": "published",
+    "title": "Different Strokes for Different Folks: Writer Identification for Historical Arabic Manuscripts",
+    "authors": [
+      "Hamza A. Abushahla",
+      "Ariel Justine N. Panopio",
+      "Layth Al-Khairulla",
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "International Journal on Document Analysis and Recognition",
+    "year": 2026,
+    "tracks": [
+      "applied"
+    ],
+    "doi": "10.1007/s10032-026-00596-4",
+    "url": "https://doi.org/10.1007/s10032-026-00596-4"
+  },
+  {
+    "id": "J8",
+    "kind": "journal",
+    "status": "published",
+    "title": "Cognitive Radio Spectrum Sensing on the Edge: A Quantization-Aware Deep Learning Approach",
+    "authors": [
+      "Hamza A. Abushahla",
+      "Dara Varam",
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "IEEE Communications Letters",
+    "year": 2025,
+    "tracks": [
+      "wireless",
+      "efficient-ml"
+    ],
+    "figure": "/images/papers/J8.png",
+    "doi": "10.1109/lcomm.2025.3582680",
+    "url": "https://doi.org/10.1109/lcomm.2025.3582680"
+  },
+  {
+    "id": "J7",
+    "kind": "journal",
+    "status": "published",
+    "title": "Class Separation Dynamics in Vision Transformers: An Empirical Study",
+    "authors": [
+      "Dara Varam",
+      "Lujain Khalil",
+      "Mahmoud Darwish",
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "IEEE Access",
+    "year": 2025,
+    "tracks": [
+      "generative"
+    ],
+    "figure": "/images/papers/J7.png",
+    "doi": "10.1109/access.2025.3602733",
+    "url": "https://doi.org/10.1109/access.2025.3602733"
+  },
+  {
+    "id": "J6",
+    "kind": "journal",
+    "status": "published",
+    "title": "Classification of Indoor Environments in Time Varying Channels",
+    "authors": [
+      "Muhammed Noshin",
+      "Mohamed I. AlHajri",
+      "Nazar T. Ali",
+      "Ahmed Altunaiji"
+    ],
+    "venue": "IEEE Antennas and Wireless Propagation Letters",
+    "year": 2025,
+    "tracks": [
+      "wireless"
+    ],
+    "figure": "/images/papers/J6.png",
+    "doi": "10.1109/lawp.2025.3576149",
+    "url": "https://doi.org/10.1109/lawp.2025.3576149"
+  },
+  {
+    "id": "J5",
+    "kind": "journal",
+    "status": "published",
+    "title": "Outage Analysis of THz-Enabled IRS-Assisted Multi-user Space-Air-Ground Integrated Networks",
+    "authors": [
+      "Ahmed M. Benaya",
+      "Mohamed I. AlHajri",
+      "Mohamed S. Hassan",
+      "Mahmoud H. Ismail",
+      "Taha Landolsi"
+    ],
+    "venue": "IEEE Open Journal of the Communications Society",
+    "year": 2025,
+    "tracks": [
+      "wireless"
+    ],
+    "figure": "/images/papers/J5.png",
+    "doi": "10.1109/ojcoms.2025.3556887",
+    "url": "https://doi.org/10.1109/ojcoms.2025.3556887"
+  },
+  {
+    "id": "J4",
+    "kind": "journal",
+    "status": "published",
+    "title": "Properties of Type-2 Complex Conjugate Pair Sums and Their Applications",
+    "authors": [
+      "Shaik Basheeruddin Shah",
+      "Vijay Kumar Chakka",
+      "Arikatla Satyanarayana Reddy",
+      "Goli Srikanth",
+      "Nazar T. Ali",
+      "Ahmed Altunaiji",
+      "Mohamed I. AlHajri",
+      "Dragan Olcan",
+      "Raed Abd-Alhameed"
+    ],
+    "venue": "APSIPA Transactions on Signal and Information Processing",
+    "year": 2024,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1561/116.20240056",
+    "url": "https://doi.org/10.1561/116.20240056"
+  },
+  {
+    "id": "J3",
+    "kind": "journal",
+    "status": "published",
+    "title": "A Novel Real-Time Deep Learning Approach for Indoor Localization Based on RF Environment Identification",
+    "authors": [
+      "Zhenghua Chen",
+      "Mohamed I. AlHajri",
+      "Nazar T. Ali",
+      "Raed M. Shubair"
+    ],
+    "venue": "IEEE Sensors Letters",
+    "year": 2020,
+    "tracks": [
+      "wireless"
+    ],
+    "note": "Most Popular Article for 8 months in IEEE Sensors Letters",
+    "doi": "10.1109/lsens.2020.2991145",
+    "url": "https://doi.org/10.1109/lsens.2020.2991145"
+  },
+  {
+    "id": "J2",
+    "kind": "journal",
+    "status": "published",
+    "title": "Indoor Localization for IoT Using Adaptive Feature Selection: A Cascaded Machine Learning Approach",
+    "authors": [
+      "Mohamed I. AlHajri",
+      "Nazar T. Ali",
+      "Raed M. Shubair"
+    ],
+    "venue": "IEEE Antennas and Wireless Propagation Letters",
+    "year": 2019,
+    "tracks": [
+      "wireless"
+    ],
+    "note": "Most Popular Article for 6 months in IEEE AWPL",
+    "doi": "10.1109/lawp.2019.2915047",
+    "url": "https://doi.org/10.1109/lawp.2019.2915047"
+  },
+  {
+    "id": "J1",
+    "kind": "journal",
+    "status": "published",
+    "title": "Classification of Indoor Environments for IoT Applications: A Machine Learning Approach",
+    "authors": [
+      "Mohamed I. AlHajri",
+      "Nazar T. Ali",
+      "Raed M. Shubair"
+    ],
+    "venue": "IEEE Antennas and Wireless Propagation Letters",
+    "year": 2018,
+    "tracks": [
+      "wireless"
+    ],
+    "note": "Most Popular Article for 18 months in IEEE AWPL",
+    "doi": "10.1109/lawp.2018.2869548",
+    "url": "https://doi.org/10.1109/lawp.2018.2869548"
+  },
+  {
+    "id": "B1",
+    "kind": "book-chapter",
+    "status": "published",
+    "title": "AI for Emerging Verticals: Human-Robot Computing, Sensing and Networking",
+    "authors": [
+      "Mohamed I. AlHajri",
+      "Nazar T. Ali",
+      "Raed M. Shubair"
+    ],
+    "venue": "IET Computing and Networks",
+    "year": 2020,
+    "tracks": [
+      "applied",
+      "wireless"
+    ],
+    "doi": "10.1049/pbpc034e",
+    "url": "https://doi.org/10.1049/pbpc034e"
+  },
+  {
+    "id": "C13",
+    "kind": "conference",
+    "status": "published",
+    "title": "Complex Coprime Frequency Sum Based Signal Representation for Period Estimation",
+    "authors": [
+      "Shaik Basheeruddin Shah",
+      "Nazar T. Ali",
+      "Ahmed Altunaiji",
+      "Vijay Kumar Chakka",
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "IEEE ICASSP",
+    "year": 2025,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1109/icassp49660.2025.10890254",
+    "url": "https://doi.org/10.1109/icassp49660.2025.10890254"
+  },
+  {
+    "id": "C12",
+    "kind": "conference",
+    "status": "published",
+    "title": "Outage Analysis for a HAPS-Mounted IRS-Assisted Multi-User Communication System",
+    "authors": [
+      "Ahmed M. Benaya",
+      "Mohamed S. Hassan",
+      "Mahmoud H. Ismail",
+      "Taha Landolsi",
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "IEEE ICCSPA",
+    "year": 2024,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1109/iccspa61559.2024.10794418",
+    "url": "https://doi.org/10.1109/iccspa61559.2024.10794418"
+  },
+  {
+    "id": "C11",
+    "kind": "conference",
+    "status": "published",
+    "title": "Indoor Localization Under Limited Measurements: A Cross-Environment Joint Semi-Supervised and Transfer Learning Approach",
+    "authors": [
+      "Mohamed I. AlHajri",
+      "Raed M. Shubair",
+      "Marwa Chafii"
+    ],
+    "venue": "IEEE SPAWC",
+    "year": 2021,
+    "tracks": [
+      "wireless",
+      "applied"
+    ],
+    "doi": "10.1109/spawc51858.2021.9593245",
+    "url": "https://doi.org/10.1109/spawc51858.2021.9593245"
+  },
+  {
+    "id": "C10",
+    "kind": "conference",
+    "status": "published",
+    "title": "A Machine Learning Approach for the Classification of Indoor Environments Using RF Signatures",
+    "authors": [
+      "Mohamed I. AlHajri",
+      "Nazar T. Ali",
+      "Raed M. Shubair"
+    ],
+    "venue": "IEEE GlobalSIP",
+    "year": 2018,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1109/globalsip.2018.8646600",
+    "url": "https://doi.org/10.1109/globalsip.2018.8646600"
+  },
+  {
+    "id": "C9",
+    "kind": "conference",
+    "status": "published",
+    "title": "A New Technique for UCA-Based DOA Estimation of Coherent Signals",
+    "authors": [
+      "Raed M. Shubair",
+      "Abdulrahman Goian",
+      "Mohamed I. AlHajri",
+      "Ahmed R. Kulaib"
+    ],
+    "venue": "IEEE Mediterranean Microwave Symposium (MMS)",
+    "year": 2016,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1109/mms.2016.7803806",
+    "url": "https://doi.org/10.1109/mms.2016.7803806"
+  },
+  {
+    "id": "C8",
+    "kind": "conference",
+    "status": "published",
+    "title": "On the Design of Millimeterwave Antennas for 5G",
+    "authors": [
+      "Menna El Shorbagy",
+      "Raed M. Shubair",
+      "Mohamed I. AlHajri",
+      "Nazih Khaddaj Mallat"
+    ],
+    "venue": "IEEE Mediterranean Microwave Symposium (MMS)",
+    "year": 2016,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1109/mms.2016.7803878",
+    "url": "https://doi.org/10.1109/mms.2016.7803878"
+  },
+  {
+    "id": "C7",
+    "kind": "conference",
+    "status": "published",
+    "title": "Miniature Planar Ultra-Wide-Band Microstrip Antenna for Breast Cancer Detection",
+    "authors": [
+      "R. Karli",
+      "H. Ammor",
+      "Raed M. Shubair",
+      "Mohamed I. AlHajri",
+      "R. Alkurd",
+      "A. Hakam"
+    ],
+    "venue": "IEEE Mediterranean Microwave Symposium (MMS)",
+    "year": 2016,
+    "tracks": [
+      "wireless",
+      "applied"
+    ],
+    "doi": "10.1109/mms.2016.7803808",
+    "url": "https://doi.org/10.1109/mms.2016.7803808"
+  },
+  {
+    "id": "C6",
+    "kind": "conference",
+    "status": "published",
+    "title": "Classification of Indoor Environments Based on Spatial Correlation of RF Channel Fingerprints",
+    "authors": [
+      "Mohamed I. AlHajri",
+      "Nayef Alsindi",
+      "Nazar T. Ali",
+      "Raed M. Shubair"
+    ],
+    "venue": "IEEE International Symposium on Antennas and Propagation (APS)",
+    "year": 2016,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1109/aps.2016.7696430",
+    "url": "https://doi.org/10.1109/aps.2016.7696430"
+  },
+  {
+    "id": "C5",
+    "kind": "conference",
+    "status": "published",
+    "title": "Miniaturized Printed L-Shaped Antenna With Parasitic Element for Ultra-Wideband Applications",
+    "authors": [
+      "R. Karli",
+      "H. Ammor",
+      "Raed M. Shubair",
+      "Mohamed I. AlHajri",
+      "Ali Hakam"
+    ],
+    "venue": "ANTEM",
+    "year": 2016,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1109/antem.2016.7550162",
+    "url": "https://doi.org/10.1109/antem.2016.7550162"
+  },
+  {
+    "id": "C4",
+    "kind": "conference",
+    "status": "published",
+    "title": "A Framework for Building Undergraduate Student Research Skills Through an Independent Engineering Study Course",
+    "authors": [
+      "Raed M. Shubair",
+      "Hadeel W. Elayan",
+      "Mohamed I. AlHajri",
+      "Abdulrahman S. Goian"
+    ],
+    "venue": "International Conference on Innovations in Information Technology (IIT)",
+    "year": 2016,
+    "tracks": [
+      "applied"
+    ],
+    "doi": "10.1109/innovations.2016.7880026",
+    "url": "https://doi.org/10.1109/innovations.2016.7880026"
+  },
+  {
+    "id": "C3",
+    "kind": "conference",
+    "status": "published",
+    "title": "Fast Detection of Coherent Signals Using Pre-Conditioned Root-MUSIC Based on Toeplitz Matrix Reconstruction",
+    "authors": [
+      "Abdulrahman S. Goian",
+      "Mohamed I. AlHajri",
+      "Raed M. Shubair",
+      "Luis Weruaga",
+      "Ahmed R. Kulaib",
+      "Rashid AlMemari",
+      "Muna Darweesh"
+    ],
+    "venue": "IEEE WiMob",
+    "year": 2015,
+    "tracks": [
+      "wireless",
+      "optimization"
+    ],
+    "doi": "10.1109/wimob.2015.7347957",
+    "url": "https://doi.org/10.1109/wimob.2015.7347957"
+  },
+  {
+    "id": "C2",
+    "kind": "conference",
+    "status": "published",
+    "title": "Hybrid RSS-DOA Technique for Enhanced WSN Localization in a Correlated Environment",
+    "authors": [
+      "Mohamed I. AlHajri",
+      "Abdulrahman S. Goian",
+      "Muna Darweesh",
+      "Rashid AlMemari",
+      "Raed M. Shubair",
+      "Luis Weruaga",
+      "Ahmed R. Kulaib"
+    ],
+    "venue": "IEEE ICTRC",
+    "year": 2015,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1109/ictrc.2015.7156466",
+    "url": "https://doi.org/10.1109/ictrc.2015.7156466"
+  },
+  {
+    "id": "C1",
+    "kind": "conference",
+    "status": "published",
+    "title": "Hybrid Method for Enhanced Detection of Coherent Signals Using Circular Antenna Arrays",
+    "authors": [
+      "Mohamed I. AlHajri",
+      "Raed M. Shubair",
+      "Luis Weruaga",
+      "Ahmed R. Kulaib",
+      "Abdulrahman Goian",
+      "Muna Darweesh",
+      "Rashid AlMemari"
+    ],
+    "venue": "IEEE International Symposium on Antennas and Propagation (APS)",
+    "year": 2015,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1109/aps.2015.7305294",
+    "url": "https://doi.org/10.1109/aps.2015.7305294"
+  },
+  {
+    "id": "T3",
+    "kind": "thesis",
+    "status": "published",
+    "title": "Constrained Information Exchange Message Passing Algorithm in Probabilistic Graphical Models",
+    "authors": [
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "PhD Thesis, Massachusetts Institute of Technology",
+    "year": 2023,
+    "tracks": [
+      "optimization"
+    ]
+  },
+  {
+    "id": "T2",
+    "kind": "thesis",
+    "status": "published",
+    "title": "Novel Low-Complexity MIMO Detection Based on Constellation Shift Binary Classification",
+    "authors": [
+      "Mohamed I. AlHajri"
+    ],
+    "venue": "MSc Thesis, Massachusetts Institute of Technology",
+    "year": 2018,
+    "tracks": [
+      "wireless",
+      "efficient-ml"
+    ],
+    "url": "https://dspace.mit.edu/handle/1721.1/120367"
+  },
+  {
+    "id": "T1",
+    "kind": "thesis",
+    "status": "published",
+    "title": "Accurate and Robust Localization Techniques for Wireless Sensor Networks",
+    "authors": [
+      "Mohamed I. AlHajri",
+      "Abdulrahman Goian",
+      "Muna Darweesh",
+      "Rashid AlMemari"
+    ],
+    "venue": "BSc Thesis, Khalifa University",
+    "year": 2015,
+    "tracks": [
+      "wireless"
+    ]
+  },
+  {
+    "id": "D1",
+    "kind": "dataset",
+    "status": "published",
+    "title": "2.4 GHz Indoor Channel Measurements",
+    "authors": [
+      "Mohamed I. AlHajri",
+      "Nazar T. Ali",
+      "Raed M. Shubair"
+    ],
+    "venue": "Public dataset",
+    "year": 2018,
+    "tracks": [
+      "wireless"
+    ],
+    "note": "Frequency-domain S21 measurements captured with a Rohde and Schwarz ZVB14 VNA.",
+    "url": "https://archive.ics.uci.edu/dataset/480/2+4+ghz+indoor+channel+measurements"
+  }
+]

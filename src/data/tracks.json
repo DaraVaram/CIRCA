@@ -1,0 +1,47 @@
+[
+  {
+    "id": "optimization",
+    "label": "Optimization",
+    "title": "Optimization Theory & Algorithms",
+    "blurb": "Constrained and hierarchical multi-objective optimization. When objectives disagree, which one yields?",
+    "constraint": "Competing objectives",
+    "accent": "#D2687C",
+    "description": "Real systems are never asked to do one thing. A model must be accurate and small. A receiver must be fast and correct. A controller must be aggressive and safe. Standard multi-objective methods treat all of these symmetrically and stall in conflict equilibria, where gradients cancel and nothing actually converges.\n\nWe work on optimization that takes the hierarchy seriously. Priority-constrained descent preserves the primary objective's direction and deforms it only as much as the secondary constraints require, with closed-form solutions in low dimensions and convergence guarantees strictly stronger than Pareto stationarity. The same instinct runs through the group's origins in constrained information exchange for probabilistic graphical models, where the question is what a node is permitted to say, not just what it knows."
+  },
+  {
+    "id": "efficient-ml",
+    "label": "Efficient & Edge ML",
+    "title": "Efficient & Edge Machine Learning",
+    "blurb": "Quantization, compression, TinyML. Inference measured in microjoules, not GPU-hours.",
+    "constraint": "Bits, memory, joules",
+    "accent": "#C9A24F",
+    "description": "A model that needs a datacenter is a model that cannot go where the problem is. We compress networks until they fit on a microcontroller and then ask what actually survived: which layers tolerate four bits, which collapse, and how mixed-precision assignment can be solved rather than guessed.\n\nThe work spans layer-wise mixed-precision quantization, quantization-aware training for signal-processing front-ends, ANN-to-SNN conversion for low-latency spiking inference, and low-rank weight structure. The benchmark that matters is not accuracy alone. It is accuracy at a stated latency and a stated energy budget, on hardware you can hold in your hand."
+  },
+  {
+    "id": "wireless",
+    "label": "Wireless Sensing",
+    "title": "Wireless Sensing & Localization",
+    "blurb": "Indoor localization, RF fingerprinting, cognitive radio and spectrum sensing.",
+    "constraint": "Spectrum and bandwidth",
+    "accent": "#C97A45",
+    "description": "Radio is a shared, contested, finite resource, and the signal that reaches you has already been shaped by every wall it passed through. That distortion is a nuisance to a communications engineer and a feature to us: RF channel fingerprints carry enough structure to identify an environment, place a device inside it, and do both without dedicated infrastructure.\n\nThis is the group's longest-running line, running from DOA estimation and hybrid RSS-DOA localization through cascaded feature selection, cross-environment transfer learning under limited measurements, and time-varying channels. It now feeds directly into the edge track, in spectrum sensing that has to complete in under a millisecond on a battery."
+  },
+  {
+    "id": "generative",
+    "label": "Representation Learning",
+    "title": "Generative & Representation Learning",
+    "blurb": "Neural representations, flow matching, world models. What a network encodes, and how it separates.",
+    "constraint": "Representational capacity",
+    "accent": "#A87FB5",
+    "description": "A neural representation is a lossy contract: some structure is preserved, the rest is discarded, and the interesting question is which. We study that contract directly, asking how class separation emerges layer by layer in vision transformers, what bounds govern the evolution of separation fuzziness, and how implicit neural representations trade precision for fidelity.\n\nNeural video representation is the concrete testbed. Layered-precision scalability lets a single trained representation be decoded at multiple bitrates, which turns a compression problem into a representation-design problem and connects this track straight back to quantization."
+  },
+  {
+    "id": "applied",
+    "label": "Applied & Trustworthy",
+    "title": "Applied & Trustworthy ML",
+    "blurb": "Cross-cutting deployment: medical imaging, environmental sensing, security, fairness.",
+    "constraint": "Deployment reality",
+    "accent": "#7FA88F",
+    "description": "Methods earn their keep outside the benchmark. This track carries the group's applied and cross-cutting work, including writer identification for historical Arabic manuscripts, acoustic detection of red palm weevil infestation, computer-vision drowning detection, predictive maintenance for instrument landing systems, and air-quality monitoring.\n\nIt also carries the adversarial half of the question. Wi-Fi fingerprinting systems are only as trustworthy as their access points, so we characterize the combinatorial vulnerability of those anchors and identify the minimal sets whose removal breaks localization. Deployment is not the end of the research. It is where the next constraint shows up."
+  }
+]

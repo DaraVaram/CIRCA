@@ -1,0 +1,12 @@
+node_modules
+dist
+.DS_Store
+*.local
+.vite
+
+# Source material handed over for building the site. Kept out of the repo
+# because Pages requires it to be public, and these files carry the full CV,
+# student rosters and undergraduate employment records.
+Website.zip
+extracted/
+mohamed-alhajri.jpg

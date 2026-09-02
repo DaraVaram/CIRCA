@@ -1,0 +1,166 @@
+[
+  {
+    "slug": "mohamed-alhajri",
+    "name": "Mohamed I. AlHajri",
+    "status": "current",
+    "role": "pi",
+    "program": "Assistant Professor, Computer Science and Engineering",
+    "photo": "/images/pi/mohamed-alhajri.jpg",
+    "tracks": [
+      "optimization",
+      "wireless",
+      "efficient-ml"
+    ],
+    "startYear": 2023,
+    "currentProject": "Constrained message passing, and everything downstream of it.",
+    "bio": "Mohamed AlHajri is an Assistant Professor of Computer Science and Engineering at the American University of Sharjah. He completed his PhD at MIT in Electrical Engineering and Computer Science with a minor in Applied Mathematics, in the Claude E. Shannon Communication and Network Group at the Research Laboratory of Electronics, where his thesis developed a constrained information exchange message-passing algorithm for probabilistic graphical models. He holds an MSc from MIT and a BSc in Electrical Engineering from Khalifa University, where he ranked first across the university.",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/mohamedibrahimalhajri/"
+      },
+      {
+        "label": "Email",
+        "url": "mailto:mialhajri@aus.edu"
+      }
+    ]
+  },
+  {
+    "slug": "omar-alsuwaidi",
+    "name": "Omar Alsuwaidi",
+    "status": "current",
+    "role": "phd",
+    "program": "PhD Student in Robotics",
+    "photo": "/images/members/Omar_Alsuwaidi.jpeg",
+    "tracks": [
+      "applied"
+    ],
+    "currentProject": "Robotics.",
+    "links": []
+  },
+  {
+    "slug": "hamza-abushahla",
+    "name": "Hamza A. Abushahla",
+    "status": "current",
+    "role": "msc",
+    "program": "MSc in Machine Learning",
+    "photo": "/images/members/Hamza.jpeg",
+    "tracks": [
+      "efficient-ml",
+      "wireless"
+    ],
+    "thesisTitle": "Distribution-Aware Quantization for Low-Latency ANN-to-SNN Conversion",
+    "currentProject": "Quantization that survives the jump from artificial to spiking networks.",
+    "destination": {
+      "role": "Embedded ML Engineer",
+      "org": "Kumrah AI"
+    },
+    "links": []
+  },
+  {
+    "slug": "lujain-khalil",
+    "name": "Lujain Khalil",
+    "status": "current",
+    "role": "msc",
+    "program": "MSc in Machine Learning",
+    "photo": "/images/members/Lujain.jpeg",
+    "tracks": [
+      "generative"
+    ],
+    "thesisTitle": "Theoretical Bounds for the Evolution of Separation Fuzziness",
+    "currentProject": "How class structure sharpens layer by layer, and how far it can.",
+    "destination": {
+      "role": "AI Engineer",
+      "org": "Emaar"
+    },
+    "links": []
+  },
+  {
+    "slug": "yousef-irshaid",
+    "name": "Yousef Irshaid",
+    "status": "current",
+    "role": "msc",
+    "program": "MSc in Machine Learning",
+    "photo": "/images/members/Yousef.jpeg",
+    "tracks": [
+      "efficient-ml",
+      "optimization"
+    ],
+    "thesisTitle": "On the Role of Nonlinearities in Low-Rank Neural Weight Learning",
+    "currentProject": "What nonlinearity buys you when the weights are rank-constrained.",
+    "links": []
+  },
+  {
+    "slug": "kenzy-khalifa",
+    "name": "Kenzy Khalifa",
+    "status": "current",
+    "role": "msc",
+    "program": "MSc in Machine Learning",
+    "photo": null,
+    "tracks": [
+      "generative"
+    ],
+    "thesisTitle": "Awareness-Based Training Strategies for Neural Video Representations",
+    "currentProject": "Training neural video representations that know what they are encoding.",
+    "links": []
+  },
+  {
+    "slug": "sarah-elfattal",
+    "name": "Sarah Elfattal",
+    "status": "current",
+    "role": "msc",
+    "program": "MSc in Machine Learning",
+    "photo": "/images/members/Sarah.jpeg",
+    "tracks": [],
+    "links": []
+  },
+  {
+    "slug": "dara-varam",
+    "name": "Dara Varam",
+    "status": "alumni",
+    "role": "msc",
+    "program": "MSc in Machine Learning",
+    "photo": "/images/members/Dara.jpeg",
+    "tracks": [
+      "optimization",
+      "efficient-ml"
+    ],
+    "gradYear": 2026,
+    "thesisTitle": "Priority-Constrained Descent: Hierarchical Multi-Objective Optimization",
+    "thesisAbstract": "Many deep learning problems involve objectives that are inherently hierarchical rather than equally important. In such settings, a primary task objective must be optimized while secondary objectives impose additional constraints such as regularization, sparsity, robustness, or compression. Existing multi-objective optimization methods typically treat all objectives symmetrically, making them susceptible to conflict equilibria where gradients cancel despite the absence of true convergence in any individual objective. This thesis introduces Priority-Constrained Descent (PCD), a gradient-based optimization framework designed specifically for hierarchical objective structures. PCD preserves the descent direction of the primary objective while modifying it only as much as necessary to guarantee progress on the secondary objectives. Formally, each update is computed as the minimum-deviation direction from the primary gradient subject to constrained descent conditions on the secondary objectives, controlled by a single parameter, tau in [0, 1]. The proposed formulation admits closed-form solutions for two- and three-objective settings, is invariant to per-objective scaling, and converges only to composite multi-stationary points where all objectives are individually stationary, yielding a condition strictly stronger than Pareto stationarity. We evaluate PCD on structured neural network compression, asymmetric multi-task learning with up to five objectives, and synthetic bi-objective optimization problems with known Pareto fronts. Experimental results show that varying tau produces smooth and interpretable trade-off behavior, enabling stable control over competing objectives while consistently preserving strong primary-task performance.",
+    "currentProject": "Priority-constrained descent, the optimizer behind the homepage demo.",
+    "destination": {
+      "role": "PhD Student",
+      "org": "EPFL"
+    },
+    "awards": [
+      "Master's Level Graduate Student Research, Scholarly, and Creative Work Excellence Award (university-wide)",
+      "CEN Graduate Academic Excellence Award",
+      "2026 CEN Graduate Research Excellence Award (MS Level)"
+    ],
+    "links": [],
+    "activeCollaborator": true
+  },
+  {
+    "slug": "muhammed-noshin",
+    "name": "Muhammed Noshin",
+    "status": "alumni",
+    "role": "msc",
+    "program": "MSc in Machine Learning",
+    "photo": "/images/members/Noshin.png",
+    "tracks": [
+      "optimization",
+      "wireless"
+    ],
+    "gradYear": 2025,
+    "thesisTitle": "An Alternating Projection Framework for Element-Wise Masked Nonlinear Matrix Decomposition",
+    "thesisAbstract": "Achieving extremely low-rank representations without loss of data fidelity remains a central challenge for conventional matrix approximation techniques. This thesis presents a novel masked alternating projection algorithm for nonlinear matrix decomposition (NMD) that addresses this limitation by selectively injecting both positive and negative values into the zero entries of data matrices while preserving all nonzero data. By exploiting the structure of zero entries, the proposed method introduces additional degrees of freedom on the low-rank manifold, enabling aggressive rank reduction without compromising reconstruction accuracy. Four variants of the algorithm were developed to compare two low-rank projectors: truncated singular value decomposition (TSVD) and randomized QR, each tested with and without momentum acceleration. All variants achieve high reconstruction accuracy, with the randomized QR variant with momentum (AP-QRm) matching this accuracy while delivering significantly faster runtimes, achieving efficiency gains of 70% to 99.9% over the SVD-based approach. Extensive benchmarking across 25 diverse datasets demonstrates that AP-QRm consistently delivers state-of-the-art performance, surpassing both established nonlinear NMD and linear low-rank methods in terms of attainable rank and reconstruction error. The method enables aggressive rank reductions by 90% to 99.9%, frequently attaining an effective rank-1 while maintaining low numerical error and high perceptual quality for image data. Furthermore, AP-QRm offers substantial memory savings by reducing storage requirements by up to 680x compared to dense matrix representations and outperforming traditional sparse formats such as CSR and CSC across a wide range of sparsity levels. This ability to compress data into extremely low-rank representations translates directly into exceptional storage efficiency, making AP-QRm a scalable and robust solution for data compression, large-scale machine learning, and scientific computing, where efficient and reliable matrix representations are essential.",
+    "currentProject": "Nonlinear matrix decomposition that compresses by three orders of magnitude.",
+    "destination": {
+      "role": "Research Fellow",
+      "org": "MIT SCL"
+    },
+    "links": [],
+    "activeCollaborator": true
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "_comment": "Externally-sourced numbers that cannot be derived from this repo's data. Google Scholar has no public API, so these are refreshed on a schedule. See the README. Everything else on the metrics strip is computed from publications.json / members.json / collaborators.json and never goes stale.",
+  "citations": 841,
+  "hIndex": 16,
+  "i10Index": null,
+  "lastUpdated": "2026-09-01",
+  "source": "Google Scholar"
+}

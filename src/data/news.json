@@ -1,0 +1,245 @@
+[
+  {
+    "id": "n18",
+    "date": "2026-06-01",
+    "monthOnly": true,
+    "category": "publication",
+    "title": "Sub-Millisecond, Microjoule Edge Inference for Indoor Environment Identification published in the IEEE Internet of Things Journal",
+    "body": "Layer-wise mixed-precision quantization brings indoor environment identification under a millisecond and under a microjoule.",
+    "tracks": [
+      "efficient-ml",
+      "wireless"
+    ],
+    "href": "/publications#J10",
+    "featured": true
+  },
+  {
+    "id": "n17",
+    "date": "2026-05-01",
+    "monthOnly": true,
+    "category": "defense",
+    "title": "Dara Varam defends his MSc thesis on Priority-Constrained Descent",
+    "body": "The group's second MSc defense, on hierarchical multi-objective optimization.",
+    "tracks": [
+      "optimization"
+    ],
+    "href": "/people/dara-varam",
+    "featured": true,
+    "image": "/images/news/dara-varam-defense.jpeg",
+    "imageKind": "photo"
+  },
+  {
+    "id": "n16",
+    "date": "2026-05-01",
+    "monthOnly": true,
+    "category": "award",
+    "title": "Dara Varam wins the university-wide Master's Level Graduate Student Research Excellence Award",
+    "body": "Also recognized with the CEN Graduate Academic Excellence Award and the 2026 CEN Graduate Research Excellence Award (MS Level).",
+    "tracks": [
+      "optimization"
+    ],
+    "href": "/people/dara-varam",
+    "featured": true,
+    "image": "/images/news/dara-varam-award.jpeg",
+    "imageKind": "photo"
+  },
+  {
+    "id": "n15",
+    "date": "2025-11-01",
+    "monthOnly": true,
+    "category": "defense",
+    "title": "Muhammed Noshin defends the group's first MSc thesis",
+    "body": "An alternating projection framework for element-wise masked nonlinear matrix decomposition.",
+    "tracks": [
+      "optimization"
+    ],
+    "href": "/people/muhammed-noshin",
+    "featured": true,
+    "image": "/images/news/noshin-defense.jpeg",
+    "imageKind": "photo"
+  },
+  {
+    "id": "n14",
+    "date": "2025-09-01",
+    "monthOnly": true,
+    "category": "publication",
+    "title": "Classification of Indoor Environments in Time-Varying Channels published in IEEE AWPL",
+    "tracks": [
+      "wireless"
+    ],
+    "href": "/publications#J6",
+    "image": "/images/papers/J6.png",
+    "imageKind": "masthead"
+  },
+  {
+    "id": "n19",
+    "date": "2025-08-01",
+    "monthOnly": true,
+    "category": "publication",
+    "title": "Cognitive Radio Spectrum Sensing on the Edge published in IEEE Communications Letters",
+    "body": "Quantization-aware deep learning brings spectrum sensing down to a microcontroller budget.",
+    "tracks": [
+      "wireless",
+      "efficient-ml"
+    ],
+    "href": "/publications#J8",
+    "featured": true,
+    "image": "/images/papers/J8.png",
+    "imageKind": "masthead"
+  },
+  {
+    "id": "n13",
+    "date": "2025-08-01",
+    "monthOnly": true,
+    "category": "publication",
+    "title": "Class Separation Dynamics in Vision Transformers published in IEEE Access",
+    "tracks": [
+      "generative"
+    ],
+    "href": "/publications#J7",
+    "image": "/images/papers/J7.png",
+    "imageKind": "masthead"
+  },
+  {
+    "id": "n12",
+    "date": "2025-04-01",
+    "monthOnly": true,
+    "category": "publication",
+    "title": "Outage Analysis of THz-Enabled IRS-Assisted Networks published in IEEE OJ-COMS",
+    "tracks": [
+      "wireless"
+    ],
+    "href": "/publications#J5",
+    "image": "/images/papers/J5.png",
+    "imageKind": "masthead"
+  },
+  {
+    "id": "n11",
+    "date": "2025-04-01",
+    "monthOnly": true,
+    "category": "talk",
+    "title": "Complex Coprime Frequency Sum representation presented at ICASSP 2025",
+    "tracks": [
+      "wireless"
+    ],
+    "href": "/publications#C13"
+  },
+  {
+    "id": "n10",
+    "date": "2024-12-01",
+    "monthOnly": true,
+    "category": "publication",
+    "title": "Properties of Type-2 Complex Conjugate Pair Sums published in APSIPA",
+    "tracks": [
+      "wireless"
+    ],
+    "href": "/publications#J4"
+  },
+  {
+    "id": "n09",
+    "date": "2024-11-01",
+    "monthOnly": true,
+    "category": "talk",
+    "title": "Participation in the AUS AI Symposium",
+    "tracks": [],
+    "image": "/images/news/aus-ai-symposium.jpg",
+    "imageKind": "photo"
+  },
+  {
+    "id": "n08",
+    "date": "2024-09-01",
+    "monthOnly": true,
+    "category": "award",
+    "title": "VR Tourism for pediatric oncology patients reaches the Dell global top five",
+    "body": "Top 5 finalist in the Dell Technologies Envision the Future Competition 2024, out of 215 teams worldwide.",
+    "tracks": [
+      "applied"
+    ],
+    "featured": true
+  },
+  {
+    "id": "n07",
+    "date": "2024-05-01",
+    "monthOnly": true,
+    "category": "media",
+    "title": "Sharjah TV feature on the cognitive radio spectrum sensing project",
+    "body": "Following the project's second-place finish in the Senior Design Competition.",
+    "tracks": [
+      "wireless"
+    ],
+    "image": "/images/news/sharjah-tv.jpeg",
+    "imageKind": "photo"
+  },
+  {
+    "id": "n06",
+    "date": "2024-05-01",
+    "monthOnly": true,
+    "category": "award",
+    "title": "VR Tourism and Gamification for Pediatric Oncology Patients places third in the Senior Design Competition",
+    "tracks": [
+      "applied"
+    ],
+    "image": "/images/news/vr-tourism-award.jpeg",
+    "imageKind": "photo"
+  },
+  {
+    "id": "n05",
+    "date": "2024-05-01",
+    "monthOnly": true,
+    "category": "award",
+    "title": "Cognitive Radio Spectrum Sensing places second in the Senior Design Competition",
+    "body": "Computer Engineering track, AUS.",
+    "tracks": [
+      "wireless",
+      "efficient-ml"
+    ],
+    "image": "/images/news/cognitive-radio-award.jpeg",
+    "imageKind": "photo"
+  },
+  {
+    "id": "n04",
+    "date": "2024-04-01",
+    "monthOnly": true,
+    "category": "milestone",
+    "title": "Conference Operations Chair, IEEE Wireless Communications and Networking Conference",
+    "tracks": [
+      "wireless"
+    ],
+    "image": "/images/news/wcnc-operations-chair.jpeg",
+    "imageKind": "photo"
+  },
+  {
+    "id": "n03",
+    "date": "2024-03-01",
+    "monthOnly": true,
+    "category": "talk",
+    "title": "Invited speaker at Mufakiru Alemarat",
+    "tracks": [],
+    "image": "/images/news/mufakiru-alemarat.jpeg",
+    "imageKind": "photo"
+  },
+  {
+    "id": "n02",
+    "date": "2023-08-01",
+    "monthOnly": true,
+    "category": "milestone",
+    "title": "Dr. Mohamed AlHajri joins the American University of Sharjah as Assistant Professor",
+    "tracks": [],
+    "featured": true,
+    "image": "/images/news/joined-aus.jpeg",
+    "imageKind": "photo"
+  },
+  {
+    "id": "n01",
+    "date": "2023-06-01",
+    "monthOnly": true,
+    "category": "milestone",
+    "title": "Dr. Mohamed AlHajri completes his PhD at MIT",
+    "body": "Electrical Engineering and Computer Science, with a minor in Applied Mathematics, in the Claude E. Shannon Communication and Network Group.",
+    "tracks": [
+      "optimization"
+    ],
+    "image": "/images/news/phd-mit-graduation.jpeg",
+    "imageKind": "photo"
+  }
+]

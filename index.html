@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CIRCA</title>
+    <meta
+      name="description"
+      content="CIRCA is a research group at the American University of Sharjah building intelligent systems that operate under real-world constraints: limited bits, limited spectrum, limited compute, and competing objectives."
+    />
+    <meta name="author" content="Mohamed I. AlHajri" />
+
+    <!-- Social cards need absolute URLs, so these are not rewritten by the
+         build. Update both if the site moves to a custom domain. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://daravaram.github.io/CIRCA/" />
+    <meta property="og:site_name" content="CIRCA" />
+    <meta property="og:title" content="CIRCA" />
+    <meta
+      property="og:description"
+      content="Intelligent systems under real-world constraints. Optimization theory through to silicon, at the American University of Sharjah."
+    />
+    <meta property="og:image" content="https://daravaram.github.io/CIRCA/images/pi/mohamed-alhajri.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script>
+      // Runs before first paint so there is no flash of the wrong theme.
+      ;(function () {
+        try {
+          var saved = localStorage.getItem('lab-theme')
+          var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches
+          document.documentElement.dataset.theme = saved || (prefersLight ? 'light' : 'dark')
+        } catch (e) {
+          document.documentElement.dataset.theme = 'dark'
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "aus",
+    "institution": "American University of Sharjah",
+    "department": "Department of Computer Science and Engineering",
+    "country": "United Arab Emirates",
+    "coords": [55.492, 25.311],
+    "kind": "home",
+    "people": ["Mohamed I. AlHajri"],
+    "publications": []
+  },
+  {
+    "id": "mit",
+    "institution": "Massachusetts Institute of Technology",
+    "department": "Research Laboratory of Electronics",
+    "country": "United States",
+    "coords": [-71.0942, 42.3601],
+    "kind": "academic",
+    "people": ["Mohamed I. AlHajri", "Muhammed Noshin"],
+    "publications": ["T3", "T2"]
+  },
+  {
+    "id": "khalifa",
+    "institution": "Khalifa University",
+    "department": "Department of Electrical Engineering and Computer Science",
+    "country": "United Arab Emirates",
+    "coords": [54.4293, 24.439],
+    "kind": "academic",
+    "people": ["Nazar T. Ali", "Ahmed R. Kulaib", "Luis Weruaga", "Ahmed Altunaiji"],
+    "publications": ["J10", "J6", "J4", "J3", "J2", "J1", "J13", "C13", "C10", "C9", "C6", "C3", "C2", "C1", "T1"]
+  },
+  {
+    "id": "nyuad",
+    "institution": "New York University Abu Dhabi",
+    "department": "Engineering Division",
+    "country": "United Arab Emirates",
+    "coords": [54.4344, 24.5238],
+    "kind": "academic",
+    "people": ["Marwa Chafii", "Raed M. Shubair"],
+    "publications": ["C11"]
+  },
+  {
+    "id": "shivnadar",
+    "institution": "Shiv Nadar Institution of Eminence",
+    "department": "Department of Electrical Engineering",
+    "country": "India",
+    "coords": [77.5691, 28.5236],
+    "kind": "academic",
+    "people": ["Vijay Kumar Chakka", "Arikatla Satyanarayana Reddy", "Shaik Basheeruddin Shah", "Goli Srikanth"],
+    "publications": ["J4", "J13", "C13"]
+  },
+  {
+    "id": "belgrade",
+    "institution": "University of Belgrade",
+    "department": "School of Electrical Engineering",
+    "country": "Serbia",
+    "coords": [20.4489, 44.8058],
+    "kind": "academic",
+    "people": ["Dragan Olcan"],
+    "publications": ["J4"]
+  },
+  {
+    "id": "bradford",
+    "institution": "University of Bradford",
+    "department": "Department of Electronic and Electrical Engineering",
+    "country": "United Kingdom",
+    "coords": [-1.7511, 53.7909],
+    "kind": "academic",
+    "people": ["Raed Abd-Alhameed"],
+    "publications": ["J4"]
+  },
+  {
+    "id": "i2r-astar",
+    "institution": "A*STAR",
+    "department": "Institute for Infocomm Research",
+    "country": "Singapore",
+    "coords": [103.788, 1.2996],
+    "kind": "academic",
+    "people": ["Zhenghua Chen"],
+    "publications": ["J3"]
+  },
+  {
+    "id": "carleton",
+    "institution": "Carleton University",
+    "department": "Department of Systems and Computer Engineering",
+    "country": "Canada",
+    "coords": [-75.6972, 45.3876],
+    "kind": "academic",
+    "people": ["Mohammad Zulkernine", "Muhammed Hannan"],
+    "publications": ["J11"]
+  },
+  {
+    "id": "uaeu",
+    "institution": "United Arab Emirates University",
+    "department": "Department of Electrical Engineering",
+    "country": "United Arab Emirates",
+    "coords": [55.6717, 24.1969],
+    "kind": "academic",
+    "people": ["Nazih Khaddaj Mallat"],
+    "publications": ["C8"]
+  },
+  {
+    "id": "um5",
+    "institution": "Mohammed V University-Agdal",
+    "department": "Electronic and Communication Laboratory EMI, Rabat",
+    "country": "Morocco",
+    "coords": [-6.8656, 33.9866],
+    "kind": "academic",
+    "people": ["R. Karli", "H. Ammor"],
+    "publications": ["C7", "C5"]
+  },
+  {
+    "id": "guc",
+    "institution": "German University in Cairo",
+    "department": "Faculty of Information Engineering and Technology",
+    "country": "Egypt",
+    "coords": [31.4489, 29.9866],
+    "kind": "academic",
+    "people": ["Ahmed M. Benaya"],
+    "publications": ["J5", "C12"]
+  }
+]

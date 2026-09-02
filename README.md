@@ -1,0 +1,198 @@
+# CIRCA research group site
+
+**C**onstrained **I**nference, **R**epresentation, **C**ompression and
+**A**pplications. American University of Sharjah.
+
+React + Vite + TypeScript + Tailwind v4. Content lives in JSON, and components
+never hardcode it.
+
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm run build      # typecheck + production build to dist/
+npm run typecheck
+```
+
+## Where to edit content
+
+Everything editable without touching a component:
+
+| File | Holds |
+| --- | --- |
+| `src/site.config.ts` | Group name, tagline, logo, PI details, nav, contact routing |
+| `src/data/pi.json` | The principal investigator profile: bio, education, appointments, teaching, awards, service, government roles |
+| `src/data/tracks.json` | The five research tracks (title, blurb, long description, accent color) |
+| `src/data/members.json` | Current members and alumni, including theses and abstracts |
+| `src/data/publications.json` | Full bibliography, keyed to the CV labels (`J12`, `C7`, `B1`, `T3`, `D1`) |
+| `src/data/news.json` | News feed. `featured: true` also puts an item on the home ticker |
+| `src/data/collaborators.json` | Institutions for the collaboration map. The entry with `"kind": "home"` is the group's own institution and the origin of every arc, so it is not counted as a collaborator |
+| `src/data/projects.json` | Senior design and capstone projects |
+| `src/data/undergraduates.json` | Where capstone students went afterwards, matched by name |
+| `src/data/scholar.json` | Citation count and h-index (see below) |
+
+Types for all of it are in `src/types/content.ts`. `npm run typecheck` will fail
+if a JSON file drifts from its schema, so a typo in a track id is caught at build
+time rather than in the browser.
+
+### Branding
+
+`siteConfig.name` is the only place the group name appears.
+
+The mark lives in `src/components/ui/Mark.tsx` and has five variants, all built
+on the same idea the name carries: a circle approximated by straight segments.
+Switch between them with `logoVariant` in `site.config.ts`, or set `logo` to a
+path in `/public` to use a custom file instead.
+
+| Variant | Mark |
+| --- | --- |
+| `A` | Seven chords, open as a C |
+| `B` | The same chords with the exact circle ghosted behind, showing the error |
+| `C` | A constrained path bending around a boundary |
+| `D` | The circle snapped to an integer lattice |
+| `E` | Three arcs, coarser toward the center. **The current mark** |
+
+Variant E carries three rings at display size. Below roughly 24px they merge
+into a blob, so `Mark` takes a `compact` prop that drops to a two-ring reduction
+for small renders. The favicon uses that same reduction.
+
+`public/favicon.svg` is generated from the same geometry as the component, so the
+two cannot drift apart. Regenerate it after changing `logoVariant`, and update
+`VARIANT` at the top of the script to match:
+
+```bash
+npm run favicon
+```
+
+### Track tagging
+
+Every publication, member and project carries a `tracks` array of one or two
+`TrackId` values. That tagging drives the publication filters, the track detail
+pages, and the per-track counts, so it is worth keeping accurate.
+
+## Metrics
+
+Four of the five home page metrics are computed from the data files and cannot go
+stale: publication count, collaborating institutions, country count, and member
+count. They update the moment you edit the JSON.
+
+Citations and h-index cannot be derived, because Google Scholar has no public
+API. They live in `src/data/scholar.json` with a `lastUpdated` date that is shown
+in the footer, so the number is never presented as more current than it is. Three
+ways to keep it fresh, in increasing order of effort:
+
+1. Edit `scholar.json` by hand a few times a year (current setup).
+2. A scheduled GitHub Action that scrapes the Scholar profile and opens a pull
+   request. Scholar rate-limits and occasionally serves a CAPTCHA, so it needs to
+   fail gracefully and leave the last good value in place.
+3. A paid API such as SerpApi. Reliable, roughly $50 per month.
+
+## Images
+
+| Folder | Holds |
+| --- | --- |
+| `public/images/members/` | Square member photos, referenced by `photo` in `members.json` |
+| `public/images/pi/` | Principal investigator portraits |
+| `public/images/news/` | Event photography, referenced by `image` in `news.json` |
+| `public/images/papers/` | Journal mastheads and figures, referenced by `figure` on a publication |
+
+News items and publications carry `imageKind: "masthead"` when the image is a
+journal title block on white paper. The UI then frames it as a document instead
+of bleeding it into the dark layout.
+
+## Adding a person
+
+Add an entry to `members.json` and drop a square photo in
+`public/images/members/`. `slug` becomes the profile URL. Publications link
+themselves to a member automatically: `src/lib/content.ts` matches author strings
+to members on first initial plus surname, so `Hamza A. Abushahla` in a paper
+resolves to the `hamza-abushahla` profile with no manual cross-referencing.
+
+Set `activeCollaborator: true` on an alumnus who is still working with the group.
+They keep their alumni status but stay marked as active on the People page.
+
+## Typography and theme
+
+Fonts are self-hosted through `@fontsource-variable`, so there are no external
+requests and the site works offline. Newsreader carries the headings, Inter the
+body, and JetBrains Mono the labels.
+
+The identity color is the MIT and AUS maroon. Tokens are named by **role**, not
+by literal color: `ink-950` always means "page background" and `slate-50` always
+means "strongest text". The light theme reassigns those same tokens rather than
+introducing a parallel set of classes, so no component carries a `dark:` variant.
+
+- `src/index.css` holds both themes. The `@theme` block is the dark default, and
+  `:root[data-theme='light']` overrides the same custom properties. Tailwind v4
+  utilities read those properties at use time, so an override flips every
+  utility built on them.
+- `src/lib/theme.ts` is the runtime side: the toggle, the `useTheme()` hook, and
+  `vizPalette()`, which resolves the active theme's colors for canvas code that
+  cannot use classes.
+- `trackVar(id)` returns `var(--color-track-<id>)`, safe inside an inline style,
+  so track accents follow the theme without threading it through props.
+
+An inline script in `index.html` applies the stored or system-preferred theme
+before first paint, so there is no flash of the wrong theme.
+
+## Research track demos
+
+Each of the five tracks has a working demo in `src/components/viz/`, shown in the
+home page carousel (`TrackShowcase.tsx`) and on the matching track page. They run
+the real method rather than showing a picture of it:
+
+| Track | Demo | What it computes |
+| --- | --- | --- |
+| Optimization | `ConstrainedDescent` | Priority-constrained descent against plain gradient descent, with a live tau |
+| Efficient & Edge ML | `QuantizationDemo` | Uniform symmetric quantization at 1 to 8 bits, with real RMSE |
+| Wireless Sensing | `MultipathDemo` | Image-method reflections and the resulting channel impulse response |
+| Representation Learning | `SeparationDemo` | Class separation across depth, scored by between-class over within-class scatter |
+| Applied & Trustworthy | `FingerprintDemo` | Log-distance RSSI fingerprints, and which cells stay resolvable as access points go offline |
+
+All five share `useCanvasPainter.ts`, which handles device pixel ratio, resize,
+and repainting when the theme flips. Each is lazily loaded, so only the first
+slide is in the initial bundle.
+
+## Publication links
+
+`scripts/fetch-dois.mjs` looks up DOIs against Crossref. It only accepts a match
+when the returned title is a close token match **and** one of our authors appears
+on the record, because a wrong DOI is worse than no DOI. Anything below that bar
+is reported for a human to confirm.
+
+```bash
+node scripts/fetch-dois.mjs          # report only
+node scripts/fetch-dois.mjs --write  # apply the confident matches
+```
+
+Every publication row offers BibTeX and plain-text citation copy, generated in
+`src/lib/citation.ts`.
+
+## House style
+
+Site copy avoids em dashes and semicolons, and uses American spellings
+throughout. `scripts/check-copy.py` enforces all three across `src/` and this
+file.
+
+```bash
+python scripts/check-copy.py
+```
+
+## Deployment
+
+The build is a static SPA in `dist/`. It uses `BrowserRouter`, so the host must
+rewrite unknown paths to `index.html`:
+
+- **Vercel and Netlify** work out of the box.
+- **GitHub Pages** needs a `404.html` copy of `index.html`, or switch
+  `BrowserRouter` to `HashRouter` in `src/main.tsx`, a one-line change.
+
+## Content still needed
+
+- A photo for Kenzy Khalifa.
+- A thesis title for Sarah Elfattal, and her track tags.
+- A higher-resolution photo for Yousef Irshaid. The current one is 200x200.
+- DOIs and links for publications. `Publication` has optional `doi`, `url` and
+  `pdf` fields that the UI already uses when present.
+- Confirmation of which paper backs each collaboration in `collaborators.json`.
+  The institution list is confirmed, but the per-paper attribution is inferred
+  from co-author names.

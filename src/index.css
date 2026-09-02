@@ -1,0 +1,229 @@
+@import 'tailwindcss';
+
+/* Self-hosted variable fonts: no external requests, works offline.
+   Newsreader carries the headings, Inter the body, JetBrains Mono the labels. */
+@import '@fontsource-variable/newsreader';
+@import '@fontsource-variable/newsreader/wght-italic.css';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+/*
+ * Theming works by role, not by literal color. `ink-950` always means "page
+ * background" and `slate-50` always means "strongest text", so the light theme
+ * simply reassigns those same tokens. Tailwind v4 emits utilities that read the
+ * custom properties at use time, so overriding a property under
+ * [data-theme='light'] flips every utility built on it with no class changes
+ * anywhere in the components.
+ */
+@theme {
+  /* Warm near-blacks. The whole surface is browned, so the maroon accent sits
+     in the same family rather than reading as red on blue-gray. */
+  --color-ink-950: #0a0708;
+  --color-ink-900: #100b0d;
+  --color-ink-850: #161011;
+  --color-ink-800: #1d1516;
+  --color-ink-700: #2b2021;
+  --color-ink-600: #3d2e2f;
+
+  /* MIT / AUS maroon. 500 is the solid brand fill (takes light text), 400 is
+     the lightened tint that carries contrast on the dark ground. */
+  --color-signal-200: #f2c4cb;
+  --color-signal-300: #e39aa6;
+  --color-signal-400: #ce6478;
+  --color-signal-500: #a62b42;
+  --color-signal-600: #8c2135;
+  --color-signal-700: #75182a;
+  --color-signal-800: #5a1220;
+  --color-signal-900: #430d18;
+
+  /* Track accents, warm-shifted to harmonize with the maroon. Named to match
+     the TrackId values exactly, so components can build var(--color-track-<id>)
+     and get theme-following colors inside inline styles. */
+  --color-track-optimization: #d2687c;
+  --color-track-efficient-ml: #c9a24f;
+  --color-track-wireless: #c97a45;
+  --color-track-generative: #a87fb5;
+  --color-track-applied: #7fa88f;
+
+  /* Tailwind's slate is blue-gray. Redefining it here warms every existing
+     text-slate-* and border-slate-* in the codebase in one place. */
+  --color-slate-50: #fbf7f6;
+  --color-slate-100: #f0e9e7;
+  --color-slate-200: #dfd4d2;
+  --color-slate-300: #c6b7b4;
+  --color-slate-400: #a99795;
+  --color-slate-500: #93807e;
+  --color-slate-600: #8b7674;
+  --color-slate-700: #5c4b49;
+  --color-slate-800: #3e3130;
+  --color-slate-900: #281f1e;
+  --color-slate-950: #171111;
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Newsreader Variable', ui-serif, Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+/* Surfaces the canvas visuals read at draw time, so they follow the theme too. */
+:root {
+  --viz-body: #ddd0ce;
+  --viz-land: #241a19;
+  --viz-land-stroke: #3b2b2a;
+  --viz-graticule: #2a1f20;
+  --viz-neutral: #a99795;
+  --viz-faint: #5c4b49;
+  --viz-grid: rgba(180, 160, 158, 0.05);
+  --viz-paper: #f0e9e7;
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  /* The ink ramp inverts: 950 is still the page, but the page is now paper. */
+  --color-ink-950: #fbf8f7;
+  --color-ink-900: #f3edeb;
+  --color-ink-850: #e9e0dd;
+  --color-ink-800: #ded2ce;
+  --color-ink-700: #cdbdb8;
+  --color-ink-600: #b09c97;
+
+  /* The maroon darkens to hold contrast on paper. */
+  --color-signal-200: #430d18;
+  --color-signal-300: #5a1220;
+  --color-signal-400: #8c2135;
+  --color-signal-500: #a62b42;
+  --color-signal-600: #75182a;
+  --color-signal-700: #5a1220;
+  --color-signal-800: #430d18;
+  --color-signal-900: #2c0810;
+
+  /* Track accents darken by roughly the same amount, keeping their hues. */
+  --color-track-optimization: #a83049;
+  --color-track-efficient-ml: #7d5a12;
+  --color-track-wireless: #9c4713;
+  --color-track-generative: #6a3f82;
+  --color-track-applied: #3a6a4e;
+
+  /* The slate ramp inverts: 50 is still the strongest text, now near-black. */
+  --color-slate-50: #1a1214;
+  --color-slate-100: #241a1c;
+  --color-slate-200: #332629;
+  --color-slate-300: #453437;
+  --color-slate-400: #574446;
+  --color-slate-500: #6b5758;
+  --color-slate-600: #7d696a;
+  --color-slate-700: #a99795;
+  --color-slate-800: #ded2ce;
+  --color-slate-900: #eee6e4;
+  --color-slate-950: #f7f2f1;
+
+  --viz-body: #33262a;
+  --viz-land: #e6dcd8;
+  --viz-land-stroke: #c3afaa;
+  --viz-graticule: #dbcecb;
+  --viz-neutral: #6b5758;
+  --viz-faint: #b09c97;
+  --viz-grid: rgba(90, 60, 55, 0.07);
+  --viz-paper: #ffffff;
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--viz-body);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    transition:
+      background-color 0.25s ease,
+      color 0.25s ease;
+  }
+
+  /* Headings carry the serif. It reads as institutional rather than startup,
+     which is the register the site needs for both audiences. */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background: var(--color-signal-500);
+    color: #fbf7f6;
+  }
+
+  /* Thin, warm scrollbar so the chrome does not fight the page. */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-ink-700) transparent;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal-400);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Faint engineering grid used behind the hero and section breaks. */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, var(--viz-grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--viz-grid) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Small-caps technical label used above section headings. */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-signal-400);
+  }
+
+  /* Journal mastheads have a baked-in white background, so they keep their own
+     ground in both themes rather than floating on the page color. */
+  .paper {
+    background-color: var(--viz-paper);
+  }
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 60s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    transition: none;
+  }
+}

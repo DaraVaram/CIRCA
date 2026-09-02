@@ -1,0 +1,220 @@
+{
+  "name": "Mohamed I. AlHajri",
+  "title": "Assistant Professor",
+  "department": "Department of Computer Science and Engineering",
+  "institution": "American University of Sharjah",
+  "photo": "/images/pi/mohamed-alhajri.jpg",
+  "photoAlt": "/images/news/phd-mit-graduation.jpeg",
+  "email": "mialhajri@aus.edu",
+  "altEmail": "malhajri@mit.edu",
+  "linkedin": "https://www.linkedin.com/in/mohamedibrahimalhajri/",
+
+  "lede": "Mohamed AlHajri works on learning and inference systems that have to operate inside a budget, whether that budget is measured in bits, in bandwidth, in joules, or in objectives that cannot all be satisfied at once.",
+
+  "bio": [
+    "He is an Assistant Professor of Computer Science and Engineering at the American University of Sharjah. He completed his PhD at MIT in Electrical Engineering and Computer Science, with a minor in Applied Mathematics, in the Claude E. Shannon Communication and Network Group at the Research Laboratory of Electronics.",
+    "His doctoral work developed a constrained information exchange message passing algorithm for probabilistic graphical models, asking not only what a node in a network knows but what it is permitted to say. That question, about inference under a communication budget, still runs through most of the group's work today.",
+    "Before MIT he read Electrical Engineering at Khalifa University, where he ranked first across the university and graduated on the Dean's Honor List in every semester. Alongside his research he has served in several UAE federal youth bodies and co-directed the IEEE-UAE Distinguished Seminar Series, which drew more than 3,000 registered participants from over 62 countries."
+  ],
+
+  "researchAreas": [
+    "Machine Learning",
+    "Learning Theory",
+    "Signal Processing",
+    "Wireless Communication"
+  ],
+
+  "education": [
+    {
+      "degree": "PhD",
+      "field": "Electrical Engineering and Computer Science, minor in Applied Mathematics",
+      "institution": "Massachusetts Institute of Technology",
+      "years": "2018 to 2023",
+      "detail": "Claude E. Shannon Communication and Network Group, Research Laboratory of Electronics",
+      "thesis": "Constrained Information Exchange Message Passing Algorithm in Probabilistic Graphical Models"
+    },
+    {
+      "degree": "MSc",
+      "field": "Electrical Engineering and Computer Science",
+      "institution": "Massachusetts Institute of Technology",
+      "years": "2016 to 2018",
+      "detail": "Claude E. Shannon Communication and Network Group, Research Laboratory of Electronics",
+      "thesis": "Novel Low-Complexity MIMO Detection Based on Constellation Shift Binary Classification"
+    },
+    {
+      "degree": "BSc",
+      "field": "Electrical Engineering",
+      "institution": "Khalifa University",
+      "years": "2011 to 2015",
+      "detail": "Ranked 1st across the university. Dean's Honor List, all semesters.",
+      "thesis": "Accurate and Robust Localization Techniques for Wireless Sensor Networks"
+    }
+  ],
+
+  "appointments": [
+    {
+      "role": "Assistant Professor",
+      "org": "American University of Sharjah",
+      "detail": "Computer Science and Engineering",
+      "years": "2023 to present"
+    },
+    {
+      "role": "Research Assistant",
+      "org": "Massachusetts Institute of Technology",
+      "detail": "Claude E. Shannon Communication and Network Group",
+      "years": "2016 to 2023"
+    },
+    {
+      "role": "Undergraduate Research Assistant",
+      "org": "Khalifa University",
+      "detail": "",
+      "years": "2014 to 2016"
+    }
+  ],
+
+  "industry": [
+    {
+      "role": "Research Collaboration",
+      "org": "Qualcomm",
+      "years": "2016 to 2017",
+      "detail": "Developed and tested radio link failure prediction algorithms on a Qualcomm dataset."
+    },
+    {
+      "role": "Intern",
+      "org": "British Telecom, Adastral Park",
+      "years": "2014",
+      "detail": "Optimized splitter configurations using genetic algorithms and simulated annealing."
+    },
+    {
+      "role": "Intern",
+      "org": "Global Foundries",
+      "years": "2013",
+      "detail": "Semiconductor manufacturing operations, Singapore."
+    }
+  ],
+
+  "teaching": [
+    {
+      "code": "MLR 570",
+      "title": "Advanced Machine Learning",
+      "level": "MSc",
+      "terms": ["Fall 2024", "Fall 2025", "Fall 2026"],
+      "description": "Machine learning concepts and data pre-processing, including aggregation, dimensionality reduction, feature selection, and measures of data similarity. Supervised learning with Naive Bayes, SVM, feedforward, convolutional and LSTM networks. Semi-supervised learning including GANs and consistency regularization. Unsupervised methods including K-Medoids, Gaussian mixtures and autoencoders. Ensemble learning and model evaluation."
+    },
+    {
+      "code": "COE 375",
+      "title": "Modeling and Simulation of Stochastic Systems",
+      "level": "BSc",
+      "terms": ["Spring 2024", "Spring 2025", "Fall 2026"],
+      "description": "Probability and stochastic processes applied to computer engineering: random variables, random processes, queuing models, and discrete-event and discrete-time simulation applied to computer systems and network performance."
+    },
+    {
+      "code": "COE 221",
+      "title": "Digital Systems",
+      "level": "BSc",
+      "terms": ["Fall 2023", "Spring 2024", "Fall 2024"],
+      "description": "Number systems and the representation of information, Boolean algebra, and the analysis and design of combinational and sequential circuits."
+    }
+  ],
+
+  "awards": [
+    { "year": "2021", "text": "Nominated for the IEEE International MGA Achievement Award for the IEEE-UAE Distinguished Seminar Series" },
+    { "year": "2021", "text": "Selected as a speaker for the Mohamed Bin Zayed Majlis for Future Generations" },
+    { "year": "2020", "text": "IEEE UAE Award of the Year" },
+    { "year": "2020", "text": "IEEE Educational Initiative Program Grant" },
+    { "year": "2019", "text": "Selected for the UAE Presidential Distinguished Student Scholarship promotion video" },
+    { "year": "2017", "text": "Selected for the UAE-USA Global Youth Council" },
+    { "year": "2016", "text": "UAE Presidential Distinguished Student Scholarship" },
+    { "year": "2016", "text": "Nominee, IEEE Pre-Doctoral Scholarship Award" },
+    { "year": "2016", "text": "Selected for the Emirates Youth Council" },
+    { "year": "2016", "text": "Top BSc Graduate Award, Khalifa University, highest GPA in the class of 2015" },
+    { "year": "2015", "text": "First Place, IEEE International Conference on Communications and Signal Processing Student Poster Competition" },
+    { "year": "2015", "text": "Top Senior Student Award, Khalifa University, highest GPA" },
+    { "year": "2014", "text": "Top Junior Student Award, Khalifa University, highest GPA" },
+    { "year": "2014", "text": "Top Junior Engineering Project Award, Khalifa University" },
+    { "year": "2014", "text": "Top National Engineering Project Award, IEEE Student Contest" },
+    { "year": "2014", "text": "First Place, IEEE Engineering Ethics Competition" },
+    { "year": "2013", "text": "Top Sophomore Student Award, Khalifa University, highest GPA" },
+    { "year": "2012", "text": "Top Freshman Student Award, Khalifa University, highest GPA" },
+    { "year": "2011 to 2015", "text": "Top BSc Student Academic Excellence Award, Khalifa University" },
+    { "year": "2011 to 2015", "text": "Academic Excellence Award and Dean's Honor List, Khalifa University" },
+    { "year": "2009", "text": "Silver Medal, United Kingdom Mathematics Trust" }
+  ],
+
+  "seminarSeries": {
+    "title": "IEEE-UAE Distinguished Seminar Series",
+    "role": "Program Co-Director",
+    "years": "2020 to 2021",
+    "points": [
+      "Endorsed by His Highness Sheikh Abdullah Bin Zayed Al Nahyan, Cabinet Member and Minister of Foreign Affairs and International Cooperation.",
+      "Endorsed by Her Excellency Shamma Bint Suhail Faris Al Mazrui, Cabinet Member and Minister of Community Development.",
+      "Endorsed by Susan Kathy Land, IEEE President and CEO 2021.",
+      "More than 3,000 registered participants from over 62 countries.",
+      "Covered by WAM, the official news agency of the UAE, and featured across Al Ittihad, Al Bayan, Emarat TV, Sharjah TV, Noor Dubai and Al Oula Radio."
+    ]
+  },
+
+  "service": [
+    { "role": "Conference Operations Chair", "org": "IEEE Wireless Communications and Networking Conference", "years": "2024" },
+    { "role": "Program Co-Director", "org": "IEEE-UAE Distinguished Seminar Series", "years": "2020 to 2021" },
+    { "role": "Reviewer", "org": "IEEE Transactions on Machine Learning in Communications and Networking", "years": "2023 to present" },
+    { "role": "Reviewer", "org": "IEEE Transactions on Neural Networks and Learning Systems", "years": "2022 to present" },
+    { "role": "Reviewer", "org": "IEEE Transactions on Signal Processing", "years": "2019 to present" },
+    { "role": "Reviewer", "org": "IEEE Transactions on Vehicular Technology", "years": "2019 to present" },
+    { "role": "Reviewer", "org": "IEEE Network Magazine", "years": "2019 to present" },
+    { "role": "Reviewer", "org": "IEEE Antennas and Wireless Propagation Letters", "years": "2019 to present" },
+    { "role": "Reviewer", "org": "IET Intelligent Transport Systems", "years": "2022 to present" },
+    { "role": "Reviewer", "org": "IEEE International Symposium on Information Theory", "years": "2023" },
+    { "role": "Reviewer", "org": "IEEE Information Theory Workshop", "years": "2022" },
+    { "role": "Reviewer", "org": "IEEE International Conference on Acoustics, Speech and Signal Processing", "years": "2021" },
+    { "role": "Technical Program Committee", "org": "IEEE MENACOMM", "years": "2019 and 2021" },
+    { "role": "Technical Program Committee", "org": "IEEE GlobalSIP", "years": "2018 and 2019" },
+    { "role": "Technical Program Committee", "org": "IEEE Mediterranean Microwave Symposium", "years": "2016 and 2017" },
+    { "role": "Conference Organization", "org": "IEEE WiMob", "years": "2015" },
+    { "role": "Treasurer", "org": "Scholars of the Emirates, MIT", "years": "2016 to 2020" },
+    { "role": "President", "org": "IEEE Student Branch, Khalifa University", "years": "2013 to 2015" }
+  ],
+
+  "governmentRoles": [
+    {
+      "org": "UAE Global Youth Council, USA",
+      "body": "Federal Youth Authority",
+      "years": "2017 to 2020",
+      "points": [
+        "Developed the strategy and structure of the council.",
+        "Led initiatives including UAE Exceptional Scholars and the Year of Zayed events across more than 15 US universities."
+      ]
+    },
+    {
+      "org": "Emirates Youth Council",
+      "body": "Prime Minister's Office",
+      "years": "2016 to 2017",
+      "points": [
+        "Developed the UAE Youth Policy.",
+        "Worked on the Youth Development and Wellbeing Index, launched by H.H. Sheikh Abdullah bin Zayed Al Nahyan.",
+        "Worked on the Emirates Youth Values Program under the patronage of Her Highness Sheikha Fatima bint Mubarak."
+      ]
+    },
+    {
+      "org": "Sharjah Youth Council",
+      "body": "Youth Office",
+      "years": "2016",
+      "points": [
+        "Developed the strategy and structure of the council.",
+        "Built strategic partnerships with 38 entities across the Emirate of Sharjah.",
+        "Created a database of scholarships, internships and opportunities available to youth in the UAE."
+      ]
+    }
+  ],
+
+  "graduateCoursework": [
+    "Algorithms for Inference",
+    "Fundamentals of Probability",
+    "High-Dimensional Statistics",
+    "Random Matrix Theory",
+    "Optimization Methods",
+    "Automatic Speech Recognition",
+    "Advances in Computer Vision",
+    "Introduction to Numerical Simulation"
+  ]
+}
