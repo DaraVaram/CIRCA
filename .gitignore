@@ -9,4 +9,6 @@ dist
 # student rosters and undergraduate employment records.
 Website.zip
 extracted/
-mohamed-alhajri.jpg
+# Leading slash anchors this to the repo root. Without it the pattern also
+# matches public/images/pi/mohamed-alhajri.jpg, which the site needs.
+/mohamed-alhajri.jpg
