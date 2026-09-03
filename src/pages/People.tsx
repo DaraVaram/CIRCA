@@ -68,7 +68,7 @@ export default function People() {
         >
           <div className="min-w-0 flex-1">
             <p className="eyebrow">Undergraduate research</p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-50">
+            <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-50">
               {impact.capstoneProjects} senior design teams, and counting.
             </h2>
             <p className="mt-3 max-w-[62ch] text-sm leading-relaxed text-slate-400">

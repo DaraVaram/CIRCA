@@ -20,7 +20,7 @@ export default function GroupSection() {
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <p className="eyebrow">The group</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-50 text-balance sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-50 text-balance sm:text-4xl">
             Small team. Unusually large output.
           </h2>
           <p className="mt-5 text-base leading-relaxed text-slate-400 sm:text-lg">

@@ -140,26 +140,51 @@ They keep their alumni status but stay marked as active on the People page.
 ## Typography and theme
 
 Fonts are self-hosted through `@fontsource-variable`, so there are no external
-requests and the site works offline. Newsreader carries the headings, Inter the
-body, and JetBrains Mono the labels.
+requests and the site works offline. Plus Jakarta Sans carries everything and
+JetBrains Mono carries the small uppercase labels.
+
+One family means headings only need a weight, which the base rule in
+`index.css` sets to 700. Display headings additionally carry `tracking-tight`,
+redefined to `-0.032em` because Plus Jakarta Sans is wide and needs more
+negative tracking at large sizes than a default sans would. Card titles set
+`font-medium` and keep their natural spacing, so do not add `tracking-tight`
+to anything below roughly 20px.
 
 The identity color is the MIT and AUS maroon. Tokens are named by **role**, not
 by literal color: `ink-950` always means "page background" and `slate-50` always
 means "strongest text". The light theme reassigns those same tokens rather than
 introducing a parallel set of classes, so no component carries a `dark:` variant.
 
-- `src/index.css` holds both themes. The `@theme` block is the dark default, and
-  `:root[data-theme='light']` overrides the same custom properties. Tailwind v4
-  utilities read those properties at use time, so an override flips every
-  utility built on them.
+- `src/index.css` holds both themes. The `@theme` block is the dark set of
+  values, and `:root[data-theme='light']` overrides the same custom properties.
+  Tailwind v4 utilities read those properties at use time, so an override flips
+  every utility built on them.
 - `src/lib/theme.ts` is the runtime side: the toggle, the `useTheme()` hook, and
   `vizPalette()`, which resolves the active theme's colors for canvas code that
   cannot use classes.
 - `trackVar(id)` returns `var(--color-track-<id>)`, safe inside an inline style,
   so track accents follow the theme without threading it through props.
 
-An inline script in `index.html` applies the stored or system-preferred theme
+Light is the house default. A stored choice wins, and a visitor whose system
+asks for dark gets dark. An inline script in `index.html` applies the result
 before first paint, so there is no flash of the wrong theme.
+
+## The hero background
+
+`FlowField` releases particles across the frame and walks them down the gradient
+of a drifting potential, leaving trails. It is the same picture the optimization
+demo draws with two paths, run with a few thousand. Trails come from washing the
+previous frame at low alpha rather than clearing it, which is cheap and gives the
+streaks their length for free.
+
+Particle count scales with the canvas area, because density rather than count is
+what makes the field read. A fixed count spread over a wide hero thins out until
+the streaks vanish.
+
+Two earlier attempts are in the history if they are ever wanted: `AuroraField`,
+a soft gradient field with grain, and `ContourField`, the level sets of a
+drifting surface drawn with marching squares. Recover either with
+`git show a1c12b1:src/components/viz/ContourField.tsx`.
 
 ## Research track demos
 

@@ -53,7 +53,7 @@ export default function Students() {
         <div className="absolute inset-0 bg-grid opacity-50" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-6 py-20">
           <p className="eyebrow">Undergraduate research</p>
-          <h1 className="mt-4 max-w-[26ch] text-4xl font-semibold tracking-tight text-slate-50 text-balance sm:text-5xl">
+          <h1 className="mt-4 max-w-[26ch] text-4xl font-bold tracking-tight text-slate-50 text-balance sm:text-5xl">
             {impact.capstoneProjects} senior design teams, and counting.
           </h1>
           <p className="mt-6 max-w-[70ch] text-lg leading-relaxed text-slate-400">
@@ -75,7 +75,7 @@ export default function Students() {
             className="w-full rounded-xl border border-ink-700/60 object-cover"
           />
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-signal-400">
+            <h2 className="text-2xl font-bold tracking-tight text-signal-400">
               Second in the world, out of 259 teams.
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-400">

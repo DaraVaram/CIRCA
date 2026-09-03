@@ -55,7 +55,7 @@ export default function TrackDetail() {
           >
             Constraint: {track.constraint}
           </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-slate-50 text-balance sm:text-5xl">
+          <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-slate-50 text-balance sm:text-5xl">
             {track.title}
           </h1>
         </div>

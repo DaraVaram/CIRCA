@@ -14,7 +14,7 @@ export default function SystemsTeaser() {
       <div className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
         <header className="max-w-[62ch]">
           <p className="eyebrow">From the lab to the field</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-50 text-balance sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-50 text-balance sm:text-4xl">
             We build the products that prove it.
           </h2>
           <p className="mt-5 text-base leading-relaxed text-slate-400 sm:text-lg">
@@ -51,7 +51,7 @@ export default function SystemsTeaser() {
                     )} 16%, transparent), transparent 70%)`,
                   }}
                 >
-                  <p className="font-serif text-4xl tracking-tight text-slate-50">
+                  <p className="text-4xl font-bold tracking-tight text-slate-50">
                     {system.venture?.name ?? system.name}
                   </p>
                   <p className="mt-3 font-mono text-[10px] tracking-[0.16em] text-slate-500 uppercase">

@@ -13,7 +13,7 @@ export default function LatestNews() {
         <header className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-[60ch]">
             <p className="eyebrow">Latest news</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-50 text-balance sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-50 text-balance sm:text-4xl">
               What has been happening.
             </h2>
           </div>

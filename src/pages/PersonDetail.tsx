@@ -73,7 +73,7 @@ export default function PersonDetail() {
                 ? 'Principal investigator'
                 : 'Current member'}
           </p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-50">{member.name}</h1>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-50">{member.name}</h1>
           <p className="mt-2 text-slate-500">{member.program}</p>
 
           <div className="mt-5 flex flex-wrap gap-2">

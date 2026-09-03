@@ -21,7 +21,7 @@ export default function JoinBand() {
           <p className="font-mono text-[10.5px] tracking-[0.18em] text-white/70 uppercase">
             Work with us
           </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white text-balance sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-white text-balance sm:text-4xl">
             Come and make something small.
           </h2>
           <p className="mt-5 text-base leading-relaxed text-white/85 sm:text-lg">

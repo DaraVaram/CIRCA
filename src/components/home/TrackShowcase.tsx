@@ -72,7 +72,7 @@ export default function TrackShowcase() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <p className="eyebrow">Live from the lab</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-50 text-balance sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-50 text-balance sm:text-4xl">
               Five constraints, five working demos
             </h2>
             <p className="mt-4 text-base leading-relaxed text-slate-400">
@@ -145,7 +145,7 @@ export default function TrackShowcase() {
               >
                 {track.constraint}
               </p>
-              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-slate-50 text-balance sm:text-3xl">
+              <h3 className="mt-4 text-2xl font-bold tracking-tight text-slate-50 text-balance sm:text-3xl">
                 {slide.question}
               </h3>
               <p className="mt-5 text-base leading-relaxed text-slate-400">{slide.body}</p>

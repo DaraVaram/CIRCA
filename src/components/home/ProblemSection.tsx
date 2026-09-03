@@ -35,7 +35,7 @@ export default function ProblemSection() {
     <section className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
       <header className="mx-auto max-w-[64ch] text-center">
         <p className="eyebrow">The problem we work on</p>
-        <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-50 text-balance sm:text-4xl">
+        <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-50 text-balance sm:text-4xl">
           Intelligence outgrew the places that need it most.
         </h2>
         <p className="mt-5 text-base leading-relaxed text-slate-400 sm:text-lg">

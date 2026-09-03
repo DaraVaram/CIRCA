@@ -15,7 +15,7 @@ export default function Section({ eyebrow, title, lead, children, className = ''
         <header className="mb-10 max-w-3xl">
           {eyebrow && <p className="eyebrow">{eyebrow}</p>}
           {title && (
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-50 text-balance sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-50 text-balance sm:text-4xl">
               {title}
             </h2>
           )}

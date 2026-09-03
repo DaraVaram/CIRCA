@@ -60,7 +60,7 @@ export default function Contact() {
         <div className="absolute inset-0 bg-grid opacity-50" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-6 py-20">
           <p className="eyebrow">Work with us</p>
-          <h1 className="mt-4 max-w-[24ch] text-4xl font-semibold tracking-tight text-slate-50 text-balance sm:text-5xl">
+          <h1 className="mt-4 max-w-[24ch] text-4xl font-bold tracking-tight text-slate-50 text-balance sm:text-5xl">
             Come and make something small.
           </h1>
           <p className="mt-6 max-w-[70ch] text-lg leading-relaxed text-slate-400">
@@ -108,7 +108,7 @@ export default function Contact() {
             <p className="font-mono text-[10.5px] tracking-[0.18em] text-white/70 uppercase">
               Get in touch
             </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
               {piProfile.name}
             </h2>
             <p className="mt-5 max-w-[60ch] text-base leading-relaxed text-white/85">

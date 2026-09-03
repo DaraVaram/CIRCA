@@ -6,15 +6,17 @@ import { useTheme, vizPalette, rgba } from '@/lib/theme'
  *
  * Particles are released across the frame and follow the gradient of a drifting
  * potential, leaving trails. What you are watching is the same thing the
- * optimization demo shows with two paths, run with two thousand of them, so the
- * background is an illustration of the group's subject rather than decoration
- * borrowed from somewhere else.
+ * optimization demo shows with two paths, run with a few thousand of them, so
+ * the background illustrates the group's own subject rather than borrowing
+ * decoration from somewhere else.
  *
  * Trails come from painting a low-alpha wash over the previous frame instead of
  * clearing it, which is cheap and gives the streaks their length for free.
  */
 
-const COUNT = 1400
+const BASE_COUNT = 1400
+/** Reference area the base count was tuned against, in CSS pixels. */
+const BASE_AREA = 620 * 420
 const FPS = 30
 const SPEED = 0.0026
 const LIFE = 190
@@ -67,10 +69,14 @@ export default function FlowField({ className = '', intensity = 1 }: Props) {
       return seed / 4294967296
     }
 
-    const px = new Float32Array(COUNT)
-    const py = new Float32Array(COUNT)
-    const age = new Float32Array(COUNT)
-    const hue = new Uint8Array(COUNT)
+    // Density, not count, is what makes the field read. A fixed count spread
+    // over a wide hero thins out until the streaks disappear, so scale it to
+    // the area actually being covered.
+    let count = BASE_COUNT
+    let px = new Float32Array(BASE_COUNT)
+    let py = new Float32Array(BASE_COUNT)
+    let age = new Float32Array(BASE_COUNT)
+    let hue = new Uint8Array(BASE_COUNT)
 
     const spawn = (i: number) => {
       px[i] = rnd()
@@ -78,7 +84,18 @@ export default function FlowField({ className = '', intensity = 1 }: Props) {
       age[i] = rnd() * LIFE
       hue[i] = Math.floor(rnd() * hues.length)
     }
-    for (let i = 0; i < COUNT; i++) spawn(i)
+    const allocate = () => {
+      const target = Math.round(
+        BASE_COUNT * Math.min(3, Math.max(0.6, (w * h) / BASE_AREA)),
+      )
+      if (target === count && px.length === target) return
+      count = target
+      px = new Float32Array(count)
+      py = new Float32Array(count)
+      age = new Float32Array(count)
+      hue = new Uint8Array(count)
+      for (let i = 0; i < count; i++) spawn(i)
+    }
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2)
@@ -121,7 +138,7 @@ export default function FlowField({ className = '', intensity = 1 }: Props) {
 
       // Wash instead of clear: the previous frame survives at reduced opacity,
       // which is what makes a moving dot read as a streak.
-      ctx.globalCompositeOperation = light ? 'source-over' : 'source-over'
+      ctx.globalCompositeOperation = 'source-over'
       ctx.fillStyle = light ? 'rgba(251, 248, 247, 0.075)' : 'rgba(10, 7, 8, 0.085)'
       ctx.fillRect(0, 0, w, h)
 
@@ -129,7 +146,7 @@ export default function FlowField({ className = '', intensity = 1 }: Props) {
       ctx.lineWidth = 1
       ctx.lineCap = 'round'
 
-      for (let i = 0; i < COUNT; i++) {
+      for (let i = 0; i < count; i++) {
         const [gx, gy] = grad(px[i], py[i], t)
         const m = Math.hypot(gx, gy) + 1e-6
         const nx = px[i] + (gx / m) * SPEED
@@ -141,7 +158,7 @@ export default function FlowField({ className = '', intensity = 1 }: Props) {
         // Fade in and out over the particle's life, so nothing pops.
         const life = age[i] / LIFE
         const fade = Math.sin(life * Math.PI)
-        ctx.strokeStyle = rgba(hues[hue[i]], (light ? 0.5 : 0.42) * fade * intensity)
+        ctx.strokeStyle = rgba(hues[hue[i]], (light ? 0.62 : 0.5) * fade * intensity)
         ctx.stroke()
 
         px[i] = nx
@@ -163,6 +180,7 @@ export default function FlowField({ className = '', intensity = 1 }: Props) {
     }
 
     resize()
+    allocate()
     if (reduce) {
       // Run a fixed number of steps to lay down a still field.
       for (let k = 0; k < 90; k++) step(k * 0.04)
@@ -170,7 +188,9 @@ export default function FlowField({ className = '', intensity = 1 }: Props) {
       raf = requestAnimationFrame(tick)
     }
 
-    const resizeObserver = new ResizeObserver(() => resize())
+    const resizeObserver = new ResizeObserver(() => {
+      if (resize()) allocate()
+    })
     resizeObserver.observe(canvas)
     const intersectionObserver = new IntersectionObserver(([e]) => {
       onScreen = e.isIntersecting

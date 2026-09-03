@@ -11,7 +11,7 @@ export default function Systems() {
         <div className="absolute inset-0 bg-grid opacity-50" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-6 py-20">
           <p className="eyebrow">From the lab to the field</p>
-          <h1 className="mt-4 max-w-[24ch] text-4xl font-semibold tracking-tight text-slate-50 text-balance sm:text-5xl">
+          <h1 className="mt-4 max-w-[24ch] text-4xl font-bold tracking-tight text-slate-50 text-balance sm:text-5xl">
             We build the products that prove it.
           </h1>
           <p className="mt-6 max-w-[68ch] text-lg leading-relaxed text-slate-400">
@@ -27,7 +27,7 @@ export default function Systems() {
       ))}
 
       <section className="mx-auto max-w-7xl px-6 py-20 text-center">
-        <h2 className="text-3xl font-semibold tracking-tight text-slate-50 text-balance">
+        <h2 className="text-3xl font-bold tracking-tight text-slate-50 text-balance">
           Both of these started as student projects.
         </h2>
         <p className="mx-auto mt-5 max-w-[62ch] text-base leading-relaxed text-slate-400">
@@ -72,7 +72,7 @@ function SystemSection({ system, banded }: { system: SystemProject; banded: bool
             >
               {system.eyebrow}
             </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-50 text-balance sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-50 text-balance sm:text-4xl">
               {system.headline}
             </h2>
             <p className="mt-5 max-w-[64ch] text-base leading-relaxed text-slate-400 sm:text-lg">
@@ -215,7 +215,7 @@ function SystemSection({ system, banded }: { system: SystemProject; banded: bool
             >
               Now a company
             </p>
-            <h3 className="mt-4 text-3xl font-semibold tracking-tight text-slate-50">
+            <h3 className="mt-4 text-3xl font-bold tracking-tight text-slate-50">
               {system.venture.name}
             </h3>
             <p className="mt-5 max-w-[70ch] text-base leading-relaxed text-slate-400">
