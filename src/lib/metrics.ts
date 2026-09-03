@@ -90,7 +90,7 @@ const gradStudents = members.filter((m) => m.role === 'phd' || m.role === 'msc')
 /** Secondary numbers used on About and Contact for the industry-facing story. */
 export const impact = {
   capstoneProjects: projects.length,
-  awardedProjects: projects.filter((p) => p.awards.length > 0).length,
+  awardedProjects: projects.filter((p) => p.outcomes.length > 0).length,
   industrySponsored: projects.filter((p) => p.industrySponsor).length,
   studentsSupervised: new Set(projects.flatMap((p) => p.students)).size,
   underReview: publications.filter((p) => p.status === 'submitted').length,

@@ -129,11 +129,11 @@ export default function TrackDetail() {
                     <span className="shrink-0 font-mono text-xs text-slate-600">{p.term}</span>
                   </div>
                   <p className="mt-2 text-sm text-slate-500">{p.students.join(', ')}</p>
-                  {p.awards.length > 0 && (
+                  {p.outcomes.length > 0 && (
                     <ul className="mt-3 space-y-1">
-                      {p.awards.map((a) => (
-                        <li key={a} className="text-xs text-track-wireless">
-                          {a}
+                      {p.outcomes.map((o) => (
+                        <li key={o.text} className="text-xs text-track-wireless">
+                          {o.text}
                         </li>
                       ))}
                     </ul>

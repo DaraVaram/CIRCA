@@ -1,14 +1,168 @@
 [
-  { "id": "sdp01", "title": "Cognitive Radio Spectrum Sensing and Allocation: A Low-Complexity Deep Learning Approach", "year": 2024, "term": "2023/24", "students": ["Hamza Abushahla", "Ghanim Alali", "Sultan Mohamed", "Muhammad Sadaqat"], "tracks": ["wireless", "efficient-ml"], "awards": ["Ranked 2nd, Senior Design Competition (Computer Engineering track)"], "industrySponsor": false, "undergraduateResearchGrant": false },
-  { "id": "sdp02", "title": "AIoT-Based Energy-Efficient Approach for Air Quality Monitoring and Predictive Analysis", "year": 2024, "term": "2023/24", "students": ["Joel John Dcruze", "Warda Ul Hasan", "Dwayne Fonseca", "Ahmed El Refaey"], "tracks": ["applied", "efficient-ml"], "awards": [], "industrySponsor": false, "undergraduateResearchGrant": true },
-  { "id": "sdp03", "title": "Sketch of Life", "year": 2024, "term": "2023/24", "students": ["Ali Hassan", "Ayham Al Refai", "Jaffar Al-Ahmad", "Mohammed Al-Armouty"], "tracks": ["applied"], "awards": [], "industrySponsor": false, "undergraduateResearchGrant": false },
-  { "id": "sdp04", "title": "VR Tourism and Gamification for Pediatric Oncology Patients", "year": 2024, "term": "2023/24", "students": ["Ananya Sudheer", "Ashrita Koshy", "Saba Hussain", "Zain Kamal Raisan"], "tracks": ["applied"], "awards": ["Top 5 finalist, Dell Technologies Envision the Future 2024 (of 215 teams)", "Ranked 3rd, Senior Design Competition (Computer Engineering track)"], "industrySponsor": true, "undergraduateResearchGrant": true },
-  { "id": "sdp05", "title": "Fast Inference and Ultra-Low Power Platform for Desert Search and Rescue (Shaheen)", "year": 2025, "term": "2024/25", "students": ["Malik Hader", "Yousef Irshaid", "Adham Elmosalamy", "Ahmad Alsaleh"], "tracks": ["efficient-ml", "applied"], "awards": ["Ranked 2nd, Dell Technologies Envision the Future 2025 (of 259 teams)", "Ranked 1st, Senior Design Competition (Computer Engineering track)"], "industrySponsor": false, "undergraduateResearchGrant": true },
-  { "id": "sdp06", "title": "RescueInsight: Automated Civil Defense Reporting and Forecasting", "year": 2025, "term": "2024/25", "students": ["Ali AlShamsi", "Abdelrahman AlShuhail", "Ibrahim AlShamsi", "Saif AlJarwan"], "tracks": ["applied"], "awards": [], "industrySponsor": false, "undergraduateResearchGrant": false },
-  { "id": "sdp07", "title": "EEG Signal Analysis and Matrix Completion Methods", "year": 2025, "term": "2024/25", "students": ["Abdalla Almarzooqi", "Hamdan Mohamed Al-Hammadi", "Mohammad Alkatheeri", "Zayd Altirkawi"], "tracks": ["optimization", "applied"], "awards": [], "industrySponsor": false, "undergraduateResearchGrant": false },
-  { "id": "sdp08", "title": "Aman: AI-Based Fire Detection, Prediction and Evacuation System with IoT Integration", "year": 2025, "term": "2024/25", "students": ["Mira Hamdan", "Alya Almazrouei", "Nada Alzaabi", "Ahlam Hashim"], "tracks": ["applied"], "awards": [], "industrySponsor": false, "undergraduateResearchGrant": true },
-  { "id": "sdp09", "title": "Machine Learning Based Predictive Maintenance for the Instrument Landing System", "year": 2026, "term": "2025/26", "students": ["Mohamed Alowais", "Abdulaziz Mohammad", "Mahmoud Darwish", "Abdallahi Ahmed"], "tracks": ["applied"], "awards": [], "industrySponsor": true, "undergraduateResearchGrant": false },
-  { "id": "sdp10", "title": "Real-Time Computer Vision-Assisted Drowning Detection and Alert System", "year": 2026, "term": "2025/26", "students": ["Rayyan Agha Alnimer", "Omar Aloruk", "Mohamed Zein", "Afif Zughayer"], "tracks": ["applied"], "awards": ["Part of Sheraa", "Patent in progress", "Spun out as Amana Vision"], "industrySponsor": false, "undergraduateResearchGrant": false },
-  { "id": "sdp11", "title": "AI Content Detection and Accuracy Check Plugin", "year": 2027, "term": "2026/27", "students": ["Seif Hussein", "Ahmed Mohamed", "Wahib Othman", "Ahmed Abdelmonem"], "tracks": ["applied"], "awards": [], "industrySponsor": false, "undergraduateResearchGrant": false },
-  { "id": "sdp12", "title": "Design and Implementation of a Scalable IoT-Based Acoustic Detection System for Early Red Palm Weevil Infestation", "year": 2027, "term": "2026/27", "students": ["Khalid Hamdan", "Abdurrahman Maricar", "Kareem Mahmoud", "Haitham Ayyash"], "tracks": ["applied", "efficient-ml"], "awards": [], "industrySponsor": false, "undergraduateResearchGrant": false }
+  {
+    "id": "sdp10",
+    "title": "Real-Time Computer Vision-Assisted Drowning Detection and Alert System (ORCA)",
+    "year": 2026,
+    "term": "2025/26",
+    "students": ["Rayyan Agha Alnimer", "Omar Aloruk", "Mohamed Zein", "Afif Zughayer"],
+    "tracks": ["applied"],
+    "outcomes": [
+      { "text": "Amana Vision founded to commercialize the system", "kind": "venture" },
+      { "text": "In validation and pilot studies" },
+      { "text": "Part of Sheraa, the Sharjah Entrepreneurship Center" },
+      { "text": "Patent application in progress", "kind": "patent" }
+    ],
+    "industrySponsor": false,
+    "undergraduateResearchGrant": false,
+    "system": "orca"
+  },
+  {
+    "id": "sdp09",
+    "title": "Machine Learning Based Predictive Maintenance for the Instrument Landing System",
+    "year": 2026,
+    "term": "2025/26",
+    "students": ["Mohamed Alowais", "Abdulaziz Mohammad", "Mahmoud Darwish", "Abdallahi Ahmed"],
+    "tracks": ["applied"],
+    "outcomes": [],
+    "industrySponsor": true,
+    "undergraduateResearchGrant": false
+  },
+  {
+    "id": "sdp12",
+    "title": "Design and Implementation of a Scalable IoT-Based Acoustic Detection System for Early Red Palm Weevil Infestation",
+    "year": 2027,
+    "term": "2026/27",
+    "students": ["Khalid Hamdan", "Abdurrahman Maricar", "Kareem Mahmoud", "Haitham Ayyash"],
+    "tracks": ["applied", "efficient-ml"],
+    "outcomes": [],
+    "industrySponsor": false,
+    "undergraduateResearchGrant": false
+  },
+  {
+    "id": "sdp11",
+    "title": "AI Content Detection and Accuracy Check Plugin",
+    "year": 2027,
+    "term": "2026/27",
+    "students": ["Seif Hussein", "Ahmed Mohamed", "Wahib Othman", "Ahmed Abdelmonem"],
+    "tracks": ["applied"],
+    "outcomes": [],
+    "industrySponsor": false,
+    "undergraduateResearchGrant": false
+  },
+  {
+    "id": "sdp08",
+    "title": "Aman: AI-Based Fire Detection, Prediction and Evacuation System with IoT Integration",
+    "year": 2025,
+    "term": "2024/25",
+    "students": ["Mira Hamdan", "Alya Almazrouei", "Nada Alzaabi", "Ahlam Hashim"],
+    "tracks": ["applied"],
+    "outcomes": [{ "text": "Funded by the Undergraduate Research Grant", "kind": "grant" }],
+    "industrySponsor": false,
+    "undergraduateResearchGrant": true
+  },
+  {
+    "id": "sdp05",
+    "title": "Fast Inference and Ultra-Low Power Platform for Desert Search and Rescue (Shaheen)",
+    "year": 2025,
+    "term": "2024/25",
+    "students": ["Malik Hader", "Yousef Irshaid", "Adham Elmosalamy", "Ahmad Alsaleh"],
+    "tracks": ["efficient-ml", "applied"],
+    "outcomes": [
+      {
+        "text": "2nd place worldwide at Dell Technologies' Envision the Future 2025, of 259 teams from 14 countries",
+        "kind": "award"
+      },
+      { "text": "1st place, AUS Senior Design Competition, Computer Engineering", "kind": "award" },
+      { "text": "Patent filed", "kind": "patent" },
+      {
+        "text": "Most comprehensive desert search-and-rescue dataset in the MENA region",
+        "kind": "dataset"
+      },
+      { "text": "Funded by the Undergraduate Research Grant", "kind": "grant" }
+    ],
+    "industrySponsor": false,
+    "undergraduateResearchGrant": true,
+    "system": "shaheen"
+  },
+  {
+    "id": "sdp06",
+    "title": "RescueInsight: Automated Civil Defense Reporting and Forecasting",
+    "year": 2025,
+    "term": "2024/25",
+    "students": ["Ali AlShamsi", "Abdelrahman AlShuhail", "Ibrahim AlShamsi", "Saif AlJarwan"],
+    "tracks": ["applied"],
+    "outcomes": [],
+    "industrySponsor": false,
+    "undergraduateResearchGrant": false
+  },
+  {
+    "id": "sdp07",
+    "title": "EEG Signal Analysis and Matrix Completion Methods",
+    "year": 2025,
+    "term": "2024/25",
+    "students": [
+      "Abdalla Almarzooqi",
+      "Hamdan Mohamed Al-Hammadi",
+      "Mohammad Alkatheeri",
+      "Zayd Altirkawi"
+    ],
+    "tracks": ["optimization", "applied"],
+    "outcomes": [],
+    "industrySponsor": false,
+    "undergraduateResearchGrant": false
+  },
+  {
+    "id": "sdp01",
+    "title": "Cognitive Radio Spectrum Sensing and Allocation: A Low-Complexity Deep Learning Approach",
+    "year": 2024,
+    "term": "2023/24",
+    "students": ["Hamza Abushahla", "Ghanim Alali", "Sultan Mohamed", "Muhammad Sadaqat"],
+    "tracks": ["wireless", "efficient-ml"],
+    "outcomes": [
+      { "text": "2nd place, AUS Senior Design Competition, Computer Engineering", "kind": "award" },
+      { "text": "Published in IEEE Communications Letters, 2025", "kind": "publication" }
+    ],
+    "industrySponsor": false,
+    "undergraduateResearchGrant": false
+  },
+  {
+    "id": "sdp04",
+    "title": "VR Tourism and Gamification for Pediatric Oncology Patients",
+    "year": 2024,
+    "term": "2023/24",
+    "students": ["Ananya Sudheer", "Ashrita Koshy", "Saba Hussain", "Zain Kamal Raisan"],
+    "tracks": ["applied"],
+    "outcomes": [
+      {
+        "text": "Top-5 finalist at Dell Technologies' Envision the Future 2024, of 215 teams",
+        "kind": "award"
+      },
+      { "text": "3rd place, AUS Senior Design Competition, Computer Engineering", "kind": "award" },
+      { "text": "Funded by the Undergraduate Research Grant", "kind": "grant" }
+    ],
+    "industrySponsor": true,
+    "undergraduateResearchGrant": true
+  },
+  {
+    "id": "sdp02",
+    "title": "AIoT-Based Energy-Efficient Approach for Air Quality Monitoring and Predictive Analysis",
+    "year": 2024,
+    "term": "2023/24",
+    "students": ["Joel John Dcruze", "Warda Ul Hasan", "Dwayne Fonseca", "Ahmed El Refaey"],
+    "tracks": ["applied", "efficient-ml"],
+    "outcomes": [{ "text": "Funded by the Undergraduate Research Grant", "kind": "grant" }],
+    "industrySponsor": false,
+    "undergraduateResearchGrant": true
+  },
+  {
+    "id": "sdp03",
+    "title": "Sketch of Life",
+    "year": 2024,
+    "term": "2023/24",
+    "students": ["Ali Hassan", "Ayham Al Refai", "Jaffar Al-Ahmad", "Mohammed Al-Armouty"],
+    "tracks": ["applied"],
+    "outcomes": [],
+    "industrySponsor": false,
+    "undergraduateResearchGrant": false
+  }
 ]

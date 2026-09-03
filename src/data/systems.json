@@ -1,0 +1,100 @@
+[
+  {
+    "id": "shaheen",
+    "index": "01",
+    "name": "Shaheen",
+    "eyebrow": "System 01, Shaheen",
+    "headline": "Finding a person lost in the desert.",
+    "lede": "More than 250 people are lost in the desert each year in the region, and every method in use today ends the same way: a human being squinting at sand, looking for a speck.",
+    "pullQuote": "There is no mobile coverage out there, so nothing can be streamed to a model in a datacenter. And an aircraft that has to carry a GPU is an aircraft with a very short flight time. The intelligence has to sit on the wing, inside a chip, under a watt.",
+    "body": "Shaheen detects a human being from the air and sends their photograph and GPS coordinates directly to rescue teams over a custom long-range radio protocol, LIT-P, designed in the lab and field-tested beyond 1,400 meters. Everything fits in a single 3D-printed enclosure.",
+    "accentTrack": "efficient-ml",
+    "image": "/images/systems/shaheen.jpg",
+    "imageAlt": "The Shaheen platform detecting a person from the air over desert dunes",
+    "kpis": [
+      { "value": "98.2%", "label": "Detection accuracy" },
+      { "value": "25 FPS", "label": "Real-time on board" },
+      { "value": "0.895 W", "label": "Total power draw" }
+    ],
+    "components": [
+      {
+        "index": "01",
+        "title": "The dataset",
+        "body": "Desert search imagery barely existed. The team collected 7,500 real images in the field, now the most comprehensive desert search-and-rescue dataset in the MENA region, and generated more than 90,000 synthetic samples covering the lighting, altitude and terrain conditions reality would not supply on schedule."
+      },
+      {
+        "index": "02",
+        "title": "The model",
+        "body": "More than 50 models were trained and parameter-optimized against a single hard constraint: it must run inside under 2 MB of RAM on a microcontroller with an NPU. This is the compression research applied end to end, not a benchmark number."
+      },
+      {
+        "index": "03",
+        "title": "The link",
+        "body": "A custom LoRa protocol, LIT-P, carries the detected image and its coordinates across open desert where no cellular network exists, validated in field tests beyond 1,400 meters."
+      }
+    ],
+    "recognition": [
+      "2nd place worldwide at Dell Technologies' Envision the Future 2025, against 259 projects from 14 countries",
+      "1st place, AUS Computer Science and Engineering Senior Design Competition",
+      "Patent filed on the detection and geolocation approach",
+      "The most comprehensive desert search-and-rescue image dataset in the MENA region",
+      "Funded by the AUS Undergraduate Research Grant"
+    ],
+    "team": {
+      "members": ["Yousef Irshaid", "Malik Hader", "Ahmad Alsaleh", "Adham Elmosalamy"],
+      "note": "Advised by Dr. Mohamed AlHajri. Conceived, built and flown by undergraduates inside the group.",
+      "image": "/images/group/team-shaheen.jpg",
+      "imageAlt": "The Shaheen team with Dr. Mohamed AlHajri"
+    },
+    "note": "Anyone can buy a fixed wing. What cannot be bought is a detector that finds a person against featureless terrain, processing that fits under a watt, and a communication link that works with no infrastructure at all. Because the value is in the payload rather than the airframe, each new mission, whether border patrol, livestock tracking, pipeline inspection, post-disaster search or environmental survey, is a retrain rather than a redesign."
+  },
+  {
+    "id": "orca",
+    "index": "02",
+    "name": "ORCA",
+    "eyebrow": "System 02, ORCA to Amana Vision",
+    "headline": "Catching a drowning before it happens.",
+    "lede": "Drowning is silent. It looks almost like swimming, it takes under a minute, and it is routinely missed by the people paid to watch for it.",
+    "pullQuote": "86.7% of pool drownings happen with a lifeguard present. Supervision is not the gap. Attention is.",
+    "body": "ORCA reads how a body is moving over time, its rhythm, posture and progress through the water, which is the only way to tell distress from play. It was trained on more than 245,000 synthetically generated frames, because real drowning footage is scarce for obvious reasons.",
+    "accentTrack": "applied",
+    "kpis": [
+      { "value": "300,000+", "label": "Drowning deaths a year worldwide" },
+      { "value": "97.2%", "label": "Distress against normal swimming" },
+      { "value": "3.8 s", "label": "Observation to alert" }
+    ],
+    "recognition": [
+      "Spun out as Amana Vision, now in validation and pilot studies",
+      "Built out inside Sheraa, the Sharjah Entrepreneurship Center",
+      "Patent application in progress"
+    ],
+    "team": {
+      "members": ["Rayyan Agha Alnimer", "Omar Aloruk", "Mohamed Zein", "Afif Zughayer"],
+      "note": "Advised by Dr. Mohamed AlHajri. A senior design project that became a venture."
+    },
+    "note": "The product decision mattered as much as the model. Instead of selling another camera, ORCA became a gateway that attaches to the cameras a property already owns.",
+    "venture": {
+      "name": "Amana Vision",
+      "lede": "The drowning-detection work has been spun out as Amana Vision. The company is in its validation and pilot phase, running the system at real sites, on real cameras, under real conditions, and is being built out inside Sheraa, the Sharjah Entrepreneurship Center, with a patent application in progress.",
+      "benefits": [
+        {
+          "title": "Faster installation",
+          "body": "Uses the CCTV already there. Nothing new to mount or wire."
+        },
+        {
+          "title": "Lower cost",
+          "body": "The customer already owns the expensive part, so deployment is one box per site."
+        },
+        {
+          "title": "Smarter over time",
+          "body": "Cloud dashboard, notifications and event history, with model improvements pushed back down."
+        },
+        {
+          "title": "Reliable by design",
+          "body": "If the internet drops, the model keeps running locally and the cloud catches up later."
+        }
+      ],
+      "teamNote": "Rayyan Agha Alnimer, Omar Aloruk, Mohamed Zein and Afif Zughayer, advised by Dr. Mohamed AlHajri. A senior design project that became a company."
+    }
+  }
+]

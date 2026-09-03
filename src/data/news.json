@@ -1,239 +1,383 @@
 [
   {
-    "id": "n18",
+    "id": "n31",
     "date": "2026-06-01",
-    "monthOnly": true,
+    "datePrecision": "month",
     "category": "publication",
-    "title": "Sub-Millisecond, Microjoule Edge Inference for Indoor Environment Identification published in the IEEE Internet of Things Journal",
-    "body": "Layer-wise mixed-precision quantization brings indoor environment identification under a millisecond and under a microjoule.",
-    "tracks": [
-      "efficient-ml",
-      "wireless"
-    ],
-    "href": "/publications#J10",
+    "title": "Priority-Constrained Descent posted to arXiv",
+    "body": "The group's optimization framework for hierarchical objectives goes public. PCD preserves the descent direction of the primary objective and modifies it only as far as necessary to guarantee progress on the secondary ones, converging to a condition strictly stronger than Pareto stationarity.",
+    "source": "Varam and AlHajri, under review at TMLR",
+    "tracks": ["optimization"],
+    "publication": "J15",
+    "externalUrl": "https://arxiv.org/abs/2606.29521",
     "featured": true
   },
   {
-    "id": "n17",
+    "id": "n30",
     "date": "2026-05-01",
-    "monthOnly": true,
-    "category": "defense",
-    "title": "Dara Varam defends his MSc thesis on Priority-Constrained Descent",
-    "body": "The group's second MSc defense, on hierarchical multi-objective optimization.",
-    "tracks": [
-      "optimization"
-    ],
-    "href": "/people/dara-varam",
-    "featured": true,
-    "image": "/images/news/dara-varam-defense.jpeg",
-    "imageKind": "photo"
-  },
-  {
-    "id": "n16",
-    "date": "2026-05-01",
-    "monthOnly": true,
+    "datePrecision": "month",
     "category": "award",
-    "title": "Dara Varam wins the university-wide Master's Level Graduate Student Research Excellence Award",
-    "body": "Also recognized with the CEN Graduate Academic Excellence Award and the 2026 CEN Graduate Research Excellence Award (MS Level).",
-    "tracks": [
-      "optimization"
-    ],
+    "title": "Dara Varam wins the university-wide Graduate Research Excellence Award",
+    "body": "The Master's Level Graduate Student Research, Scholarly and Creative Work Excellence Award, awarded across the whole university, together with the CEN Graduate Academic Excellence Award and the 2026 CEN Graduate Research Excellence Award at MS level.",
+    "source": "American University of Sharjah",
+    "tracks": ["optimization"],
     "href": "/people/dara-varam",
-    "featured": true,
-    "image": "/images/news/dara-varam-award.jpeg",
-    "imageKind": "photo"
+    "image": "/images/news/n-dara-award.jpg",
+    "imageKind": "photo",
+    "featured": true
   },
   {
-    "id": "n15",
-    "date": "2025-11-01",
-    "monthOnly": true,
-    "category": "defense",
-    "title": "Muhammed Noshin defends the group's first MSc thesis",
-    "body": "An alternating projection framework for element-wise masked nonlinear matrix decomposition.",
-    "tracks": [
-      "optimization"
-    ],
-    "href": "/people/muhammed-noshin",
-    "featured": true,
-    "image": "/images/news/noshin-defense.jpeg",
-    "imageKind": "photo"
+    "id": "n29",
+    "date": "2026-05-18",
+    "datePrecision": "day",
+    "category": "people",
+    "title": "Dara Varam defends the group's second MSc thesis",
+    "body": "Priority-Constrained Descent: Hierarchical Multi-Objective Optimization for Deep Learning, the optimization framework now at the center of the group's work, defended for the MSc in Machine Learning.",
+    "source": "Advisor: Dr. Mohamed I. AlHajri",
+    "tracks": ["optimization"],
+    "href": "/people/dara-varam",
+    "image": "/images/news/n-dara-defense.jpg",
+    "imageKind": "photo",
+    "featured": true
   },
   {
-    "id": "n14",
-    "date": "2025-09-01",
-    "monthOnly": true,
+    "id": "n28",
+    "date": "2026-01-01",
+    "datePrecision": "year",
+    "category": "people",
+    "title": "Dara Varam begins a PhD at EPFL",
+    "body": "Straight from the MSc into a doctorate at the Ecole Polytechnique Federale de Lausanne, continuing on optimization for deep learning.",
+    "source": "Ecole Polytechnique Federale de Lausanne",
+    "href": "/people/dara-varam",
+    "image": "/images/news/people-dara-epfl.svg",
+    "imageKind": "figure"
+  },
+  {
+    "id": "n27",
+    "date": "2026-01-01",
+    "datePrecision": "year",
+    "category": "venture",
+    "title": "Amana Vision founded out of the drowning-detection project",
+    "body": "The ORCA senior design project has become a company. Amana Vision is commercializing the on-site drowning-detection gateway, is in validation and pilot studies, and is being built out inside Sheraa, Sharjah's flagship startup platform.",
+    "source": "Sheraa, Sharjah Entrepreneurship Center",
+    "tracks": ["applied"],
+    "href": "/systems#orca",
+    "image": "/images/news/venture-amana.svg",
+    "imageKind": "figure",
+    "featured": true
+  },
+  {
+    "id": "n26",
+    "date": "2026-02-01",
+    "datePrecision": "year",
     "category": "publication",
-    "title": "Classification of Indoor Environments in Time-Varying Channels published in IEEE AWPL",
-    "tracks": [
-      "wireless"
-    ],
-    "href": "/publications#J6"
+    "title": "Sub-millisecond, microjoule edge inference published in the IEEE Internet of Things Journal",
+    "body": "Layer-wise mixed-precision quantization for indoor environment identification, with latency and energy measured on commodity microcontroller hardware rather than estimated. The flagship result behind the group's claim that real models fit on real chips.",
+    "source": "Abushahla, Noshin, AlHajri and Ali, IEEE Internet of Things Journal",
+    "tracks": ["efficient-ml", "wireless"],
+    "publication": "J10",
+    "featured": true
+  },
+  {
+    "id": "n25",
+    "date": "2026-03-01",
+    "datePrecision": "year",
+    "category": "publication",
+    "title": "Writer identification for historical Arabic manuscripts appears in IJDAR",
+    "body": "Different Strokes for Different Folks, the group's vision work applied to palaeography, identifying the hand behind historical Arabic manuscripts.",
+    "source": "International Journal on Document Analysis and Recognition",
+    "tracks": ["applied"],
+    "publication": "J9"
+  },
+  {
+    "id": "n24",
+    "date": "2025-11-01",
+    "datePrecision": "month",
+    "category": "people",
+    "title": "Muhammed Noshin defends the group's first MSc thesis",
+    "body": "An Alternating Projection Framework for Element-Wise Masked Nonlinear Matrix Decomposition, the work that established the group's second research direction, and the first graduate thesis completed here. He has since joined the MIT Senseable City Lab.",
+    "source": "Advisor: Dr. Mohamed I. AlHajri",
+    "tracks": ["optimization"],
+    "href": "/people/muhammed-noshin",
+    "image": "/images/news/n-noshin-defense.jpg",
+    "imageKind": "photo",
+    "featured": true
+  },
+  {
+    "id": "n23",
+    "date": "2025-09-01",
+    "datePrecision": "month",
+    "category": "publication",
+    "title": "Classification of indoor environments in time-varying channels",
+    "body": "Extending RF environment identification to channels that move, the harder and far more realistic case.",
+    "source": "Noshin, AlHajri, Ali and Altunaiji, IEEE Antennas and Wireless Propagation Letters 24(9)",
+    "tracks": ["wireless"],
+    "publication": "J6"
+  },
+  {
+    "id": "n22",
+    "date": "2025-08-25",
+    "datePrecision": "day",
+    "category": "publication",
+    "title": "Class separation dynamics in vision transformers",
+    "body": "An empirical study of how a transformer pulls classes apart as depth increases, the groundwork for Lujain Khalil's theoretical bounds on the evolution of separation fuzziness.",
+    "source": "Varam, Khalil, Darwish and AlHajri, IEEE Access",
+    "tracks": ["generative"],
+    "publication": "J7"
+  },
+  {
+    "id": "n21",
+    "date": "2025-08-01",
+    "datePrecision": "month",
+    "category": "publication",
+    "title": "A comprehensive survey of neural network quantization for microcontrollers",
+    "body": "Methods, platforms and applications gathered into one reference for anyone trying to put a real model on a real microcontroller. Posted to arXiv and under review at IEEE Access.",
+    "source": "Abushahla, Varam, Panopio and AlHajri",
+    "tracks": ["efficient-ml"],
+    "publication": "J12",
+    "externalUrl": "https://arxiv.org/abs/2508.15008"
+  },
+  {
+    "id": "n20",
+    "date": "2025-08-02",
+    "datePrecision": "month",
+    "category": "publication",
+    "title": "Cognitive radio spectrum sensing on the edge",
+    "body": "A quantization-aware deep learning approach to spectrum sensing that runs on constrained hardware. The paper began life as an undergraduate senior design project in this group two years earlier.",
+    "source": "Abushahla, Varam and AlHajri, IEEE Communications Letters 29(8), 1988 to 1992",
+    "tracks": ["wireless", "efficient-ml"],
+    "publication": "J8",
+    "featured": true
   },
   {
     "id": "n19",
-    "date": "2025-08-01",
-    "monthOnly": true,
-    "category": "publication",
-    "title": "Cognitive Radio Spectrum Sensing on the Edge published in IEEE Communications Letters",
-    "body": "Quantization-aware deep learning brings spectrum sensing down to a microcontroller budget.",
-    "tracks": [
-      "wireless",
-      "efficient-ml"
-    ],
-    "href": "/publications#J8",
+    "date": "2025-05-02",
+    "datePrecision": "month",
+    "category": "competition",
+    "title": "Shaheen takes 2nd place worldwide at Dell Technologies' Envision the Future",
+    "body": "Against 259 teams from 14 countries. Shaheen detects a person from the air at 98.2% accuracy on under 2 MB of memory and 0.895 W of power, then radios their photograph and coordinates to rescue teams over a custom long-range protocol.",
+    "source": "Yousef Irshaid, Malik Hader, Ahmad Alsaleh, Adham Elmosalamy",
+    "tracks": ["efficient-ml", "applied"],
+    "href": "/systems#shaheen",
+    "image": "/images/news/comp-shaheen-dell.svg",
+    "imageKind": "figure",
     "featured": true
   },
   {
-    "id": "n13",
-    "date": "2025-08-01",
-    "monthOnly": true,
+    "id": "n18",
+    "date": "2025-05-01",
+    "datePrecision": "month",
+    "category": "competition",
+    "title": "Shaheen wins 1st place in the AUS senior design competition",
+    "body": "First in the Computer Engineering track, and a patent filed on the detection and geolocation approach. The project also produced the most comprehensive desert search-and-rescue image dataset in the MENA region.",
+    "source": "Computer Science and Engineering, American University of Sharjah",
+    "tracks": ["efficient-ml", "applied"],
+    "href": "/systems#shaheen",
+    "image": "/images/news/comp-shaheen-aus.svg",
+    "imageKind": "figure"
+  },
+  {
+    "id": "n17",
+    "date": "2025-01-01",
+    "datePrecision": "year",
+    "category": "people",
+    "title": "Muhammed Noshin joins the MIT Senseable City Lab",
+    "body": "As a Research Fellow, after completing the group's first MSc thesis on nonlinear matrix decomposition.",
+    "source": "Massachusetts Institute of Technology",
+    "href": "/people/muhammed-noshin",
+    "image": "/images/news/people-noshin-mit.svg",
+    "imageKind": "figure"
+  },
+  {
+    "id": "n16",
+    "date": "2025-04-02",
+    "datePrecision": "month",
     "category": "publication",
-    "title": "Class Separation Dynamics in Vision Transformers published in IEEE Access",
-    "tracks": [
-      "generative"
-    ],
-    "href": "/publications#J7"
+    "title": "Outage analysis of THz-enabled IRS-assisted space-air-ground networks",
+    "body": "Performance limits for reconfigurable intelligent surfaces operating at terahertz frequencies across integrated satellite, aerial and ground links.",
+    "source": "Benaya, AlHajri, Hassan, Ismail and Landolsi, IEEE Open Journal of the Communications Society",
+    "tracks": ["wireless"],
+    "publication": "J5"
+  },
+  {
+    "id": "n15",
+    "date": "2025-04-01",
+    "datePrecision": "month",
+    "category": "publication",
+    "title": "Period estimation work presented at ICASSP 2025",
+    "body": "A complex coprime frequency-sum based signal representation for period estimation, presented at the field's flagship signal processing conference.",
+    "source": "Shah, Ali, Altunaiji, Chakka and AlHajri, IEEE ICASSP 2025",
+    "tracks": ["wireless"],
+    "publication": "C13"
+  },
+  {
+    "id": "n14",
+    "date": "2024-12-01",
+    "datePrecision": "month",
+    "category": "publication",
+    "title": "Properties of Type-2 complex conjugate pair sums",
+    "body": "Foundational signal-representation theory and its applications, in the APSIPA transactions.",
+    "source": "Shah, Chakka, Reddy, Srikanth, Ali, Altunaiji, AlHajri, Olcan and Abd-Alhameed",
+    "tracks": ["wireless"],
+    "publication": "J4"
+  },
+  {
+    "id": "n13",
+    "date": "2024-11-01",
+    "datePrecision": "month",
+    "category": "milestone",
+    "title": "Speaking at the AUS AI Symposium",
+    "body": "On a panel at the university's artificial intelligence symposium, on where machine learning research meets deployment in the region.",
+    "source": "American University of Sharjah",
+    "image": "/images/news/n-ai-symposium.jpg",
+    "imageKind": "photo"
   },
   {
     "id": "n12",
-    "date": "2025-04-01",
-    "monthOnly": true,
-    "category": "publication",
-    "title": "Outage Analysis of THz-Enabled IRS-Assisted Networks published in IEEE OJ-COMS",
-    "tracks": [
-      "wireless"
-    ],
-    "href": "/publications#J5",
-    "image": "/images/papers/J5.png",
+    "date": "2024-09-01",
+    "datePrecision": "month",
+    "category": "competition",
+    "title": "VR tourism for pediatric oncology patients reaches the Dell global top five",
+    "body": "A top-5 finalist out of 215 teams at Dell Technologies' Envision the Future 2024, for gamified virtual tourism built for children undergoing cancer treatment.",
+    "source": "Ananya Sudheer, Ashrita Koshy, Saba Hussain, Zain Kamal Raisan",
+    "tracks": ["applied"],
+    "href": "/students",
+    "image": "/images/news/comp-vr-dell.svg",
     "imageKind": "figure"
   },
   {
     "id": "n11",
-    "date": "2025-04-01",
-    "monthOnly": true,
-    "category": "talk",
-    "title": "Complex Coprime Frequency Sum representation presented at ICASSP 2025",
-    "tracks": [
-      "wireless"
-    ],
-    "href": "/publications#C13"
+    "date": "2024-07-01",
+    "datePrecision": "month",
+    "category": "publication",
+    "title": "HAPS-mounted IRS-assisted communication analyzed at ICCSPA 2024",
+    "body": "Outage analysis for a multi-user system served by a reconfigurable intelligent surface mounted on a high-altitude platform station.",
+    "source": "Benaya, Hassan, Ismail, Landolsi and AlHajri",
+    "tracks": ["wireless"],
+    "publication": "C12"
   },
   {
     "id": "n10",
-    "date": "2024-12-01",
-    "monthOnly": true,
-    "category": "publication",
-    "title": "Properties of Type-2 Complex Conjugate Pair Sums published in APSIPA",
-    "tracks": [
-      "wireless"
-    ],
-    "href": "/publications#J4"
+    "date": "2024-05-03",
+    "datePrecision": "month",
+    "category": "milestone",
+    "title": "The cognitive radio project featured on Sharjah TV",
+    "body": "An interview on Sharjah TV about the annual engineering senior design competition and the cognitive radio spectrum sensing project that took second place in it.",
+    "source": "Sharjah TV",
+    "tracks": ["wireless"],
+    "image": "/images/news/n-sharjah-tv.jpg",
+    "imageKind": "photo"
   },
   {
     "id": "n09",
-    "date": "2024-11-01",
-    "monthOnly": true,
-    "category": "talk",
-    "title": "Participation in the AUS AI Symposium",
-    "tracks": [],
-    "image": "/images/news/aus-ai-symposium.jpg",
+    "date": "2024-05-02",
+    "datePrecision": "month",
+    "category": "competition",
+    "title": "VR tourism places 3rd in the AUS senior design competition",
+    "body": "Third in the Computer Engineering track for the virtual tourism and gamification platform built for pediatric oncology patients, which would go on to reach the Dell global top five that September.",
+    "source": "Computer Science and Engineering, American University of Sharjah",
+    "tracks": ["applied"],
+    "href": "/students",
+    "image": "/images/news/n-vr-sd.jpg",
     "imageKind": "photo"
   },
   {
     "id": "n08",
-    "date": "2024-09-01",
-    "monthOnly": true,
-    "category": "award",
-    "title": "VR Tourism for pediatric oncology patients reaches the Dell global top five",
-    "body": "Top 5 finalist in the Dell Technologies Envision the Future Competition 2024, out of 215 teams worldwide.",
-    "tracks": [
-      "applied"
-    ],
-    "featured": true
+    "date": "2024-05-01",
+    "datePrecision": "month",
+    "category": "competition",
+    "title": "Cognitive radio spectrum sensing places 2nd in senior design",
+    "body": "Second in the Computer Engineering track. The project became a journal paper in IEEE Communications Letters the following year, the trajectory the group aims for with every undergraduate team.",
+    "source": "Hamza Abushahla, Ghanim Alali, Sultan Mohamed, Muhammad Sadaqat",
+    "tracks": ["wireless", "efficient-ml"],
+    "href": "/students",
+    "image": "/images/news/n-cognitive-sd.jpg",
+    "imageKind": "photo"
   },
   {
     "id": "n07",
-    "date": "2024-05-01",
-    "monthOnly": true,
-    "category": "media",
-    "title": "Sharjah TV feature on the cognitive radio spectrum sensing project",
-    "body": "Following the project's second-place finish in the Senior Design Competition.",
-    "tracks": [
-      "wireless"
-    ],
-    "image": "/images/news/sharjah-tv.jpeg",
+    "date": "2024-04-21",
+    "datePrecision": "day",
+    "category": "milestone",
+    "title": "Conference Operations Chair, IEEE WCNC 2024 in Dubai",
+    "body": "Dr. AlHajri served as Operations Chair for the IEEE Wireless Communications and Networking Conference, one of the IEEE Communications Society's flagship events, held in Dubai.",
+    "source": "IEEE WCNC 2024, Dubai, United Arab Emirates",
+    "tracks": ["wireless"],
+    "href": "/pi",
+    "image": "/images/news/n-wcnc.jpg",
     "imageKind": "photo"
   },
   {
     "id": "n06",
-    "date": "2024-05-01",
-    "monthOnly": true,
-    "category": "award",
-    "title": "VR Tourism and Gamification for Pediatric Oncology Patients places third in the Senior Design Competition",
-    "tracks": [
-      "applied"
-    ],
-    "image": "/images/news/vr-tourism-award.jpeg",
+    "date": "2024-03-01",
+    "datePrecision": "month",
+    "category": "milestone",
+    "title": "Invited speaker at Mufakiru Al Emarat",
+    "body": "Speaking at the Emirates Thinkers program on artificial intelligence, engineering research and the path from a university laboratory to something that works in the field.",
+    "source": "United Arab Emirates",
+    "image": "/images/news/n-mufakiru.jpg",
     "imageKind": "photo"
   },
   {
     "id": "n05",
-    "date": "2024-05-01",
-    "monthOnly": true,
-    "category": "award",
-    "title": "Cognitive Radio Spectrum Sensing places second in the Senior Design Competition",
-    "body": "Computer Engineering track, AUS.",
-    "tracks": [
-      "wireless",
-      "efficient-ml"
-    ],
-    "image": "/images/news/cognitive-radio-award.jpeg",
-    "imageKind": "photo"
+    "date": "2023-08-01",
+    "datePrecision": "month",
+    "category": "milestone",
+    "title": "Joining the American University of Sharjah",
+    "body": "Dr. Mohamed AlHajri joins the Department of Computer Science and Engineering as Assistant Professor and begins building the group.",
+    "source": "Department of Computer Science and Engineering",
+    "href": "/pi",
+    "image": "/images/news/n-aus-join.jpg",
+    "imageKind": "photo",
+    "featured": true
   },
   {
     "id": "n04",
-    "date": "2024-04-01",
-    "monthOnly": true,
+    "date": "2023-06-01",
+    "datePrecision": "month",
     "category": "milestone",
-    "title": "Conference Operations Chair, IEEE Wireless Communications and Networking Conference",
-    "tracks": [
-      "wireless"
-    ],
-    "image": "/images/news/wcnc-operations-chair.jpeg",
+    "title": "PhD awarded by MIT",
+    "body": "A doctorate in Electrical Engineering and Computer Science with a minor in Applied Mathematics, completed in the Claude E. Shannon Communication and Network Group at the Research Laboratory of Electronics. Thesis: Constrained Information Exchange Message Passing Algorithm in Probabilistic Graphical Models.",
+    "source": "Massachusetts Institute of Technology",
+    "tracks": ["optimization"],
+    "href": "/pi",
+    "image": "/images/news/n-phd-mit.jpg",
     "imageKind": "photo"
   },
   {
     "id": "n03",
-    "date": "2024-03-01",
-    "monthOnly": true,
-    "category": "talk",
-    "title": "Invited speaker at Mufakiru Alemarat",
-    "tracks": [],
-    "image": "/images/news/mufakiru-alemarat.jpeg",
-    "imageKind": "photo"
+    "date": "2021-06-01",
+    "datePrecision": "year",
+    "category": "award",
+    "title": "Nominated for the IEEE International MGA Achievement Award",
+    "body": "For the IEEE-UAE Distinguished Seminar Series, which drew more than 3,000 registered participants from over 62 countries and was endorsed by IEEE's President and CEO.",
+    "source": "IEEE Member and Geographic Activities",
+    "href": "/pi",
+    "image": "/images/news/award-mga.svg",
+    "imageKind": "figure"
   },
   {
     "id": "n02",
-    "date": "2023-08-01",
-    "monthOnly": true,
+    "date": "2021-05-01",
+    "datePrecision": "year",
     "category": "milestone",
-    "title": "Dr. Mohamed AlHajri joins the American University of Sharjah as Assistant Professor",
-    "tracks": [],
-    "featured": true,
-    "image": "/images/news/joined-aus.jpeg",
-    "imageKind": "photo"
+    "title": "Invited speaker at the Mohamed Bin Zayed Majlis for Future Generations",
+    "body": "Speaking on the future of artificial intelligence and engineering education in the UAE.",
+    "source": "United Arab Emirates",
+    "href": "/pi",
+    "image": "/images/news/mile-majlis.svg",
+    "imageKind": "figure"
   },
   {
     "id": "n01",
-    "date": "2023-06-01",
-    "monthOnly": true,
-    "category": "milestone",
-    "title": "Dr. Mohamed AlHajri completes his PhD at MIT",
-    "body": "Electrical Engineering and Computer Science, with a minor in Applied Mathematics, in the Claude E. Shannon Communication and Network Group.",
-    "tracks": [
-      "optimization"
-    ],
-    "image": "/images/news/phd-mit-graduation.jpeg",
-    "imageKind": "photo"
+    "date": "2020-01-01",
+    "datePrecision": "year",
+    "category": "award",
+    "title": "IEEE UAE Award of the Year",
+    "body": "Awarded by the world's largest technical professional organization for the advancement of technology.",
+    "source": "IEEE United Arab Emirates Section",
+    "href": "/pi",
+    "image": "/images/news/award-ieee-uae.svg",
+    "imageKind": "figure"
   }
 ]

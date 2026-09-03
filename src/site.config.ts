@@ -54,12 +54,13 @@ export const siteConfig = {
 
   nav: [
     { label: 'Research', to: '/research' },
+    { label: 'Systems', to: '/systems' },
     { label: 'PI', to: '/pi' },
     { label: 'People', to: '/people' },
+    { label: 'Students', to: '/students' },
     { label: 'Publications', to: '/publications' },
     { label: 'News', to: '/news' },
-    { label: 'About', to: '/about' },
-    { label: 'Contact', to: '/contact' },
+    { label: 'Join', to: '/contact' },
   ],
 } as const
 

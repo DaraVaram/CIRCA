@@ -12,8 +12,8 @@ const STORAGE_KEY = 'lab-theme'
 const listeners = new Set<() => void>()
 
 function current(): Theme {
-  if (typeof document === 'undefined') return 'dark'
-  return document.documentElement.dataset.theme === 'light' ? 'light' : 'dark'
+  if (typeof document === 'undefined') return 'light'
+  return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light'
 }
 
 function subscribe(fn: () => void) {
@@ -38,7 +38,7 @@ export function toggleTheme() {
 }
 
 export function useTheme(): Theme {
-  return useSyncExternalStore(subscribe, current, () => 'dark' as Theme)
+  return useSyncExternalStore(subscribe, current, () => 'light' as Theme)
 }
 
 /**

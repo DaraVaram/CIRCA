@@ -1,134 +1,139 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import Section from '@/components/ui/Section'
-import TrackBadge from '@/components/ui/TrackBadge'
-import { news, newsImage } from '@/lib/content'
-import { formatNewsDate } from '@/lib/format'
-import type { NewsCategory, NewsItem } from '@/types/content'
-import { assetUrl } from '@/lib/assets'
+import NewsCard, { NEWS_CATEGORY } from '@/components/ui/NewsCard'
+import { news } from '@/lib/content'
+import type { NewsCategory } from '@/types/content'
 
-const CATEGORIES: { id: NewsCategory | 'all'; label: string }[] = [
-  { id: 'all', label: 'Everything' },
-  { id: 'publication', label: 'Publications' },
-  { id: 'award', label: 'Awards' },
-  { id: 'defense', label: 'Defenses' },
-  { id: 'talk', label: 'Talks' },
-  { id: 'media', label: 'Media' },
-  { id: 'milestone', label: 'Milestones' },
+const ORDER: NewsCategory[] = [
+  'publication',
+  'award',
+  'competition',
+  'people',
+  'venture',
+  'milestone',
 ]
 
 export default function News() {
-  const [category, setCategory] = useState<NewsCategory | 'all'>('all')
-  const items = category === 'all' ? news : news.filter((n) => n.category === category)
+  const [params, setParams] = useSearchParams()
+  const [category, setCategory] = useState<NewsCategory | 'all'>(
+    () => (params.get('category') as NewsCategory | null) ?? 'all',
+  )
+
+  // Keep the filter in the URL so a filtered view is linkable and survives reload.
+  useEffect(() => {
+    const next = new URLSearchParams(params)
+    if (category === 'all') next.delete('category')
+    else next.set('category', category)
+    if (next.toString() !== params.toString()) setParams(next, { replace: true })
+  }, [category, params, setParams])
+
+  // Only offer a chip for a category that actually has items behind it.
+  const present = useMemo(
+    () => ORDER.filter((c) => news.some((n) => n.category === c)),
+    [],
+  )
+
+  const items = useMemo(
+    () => (category === 'all' ? news : news.filter((n) => n.category === category)),
+    [category],
+  )
+
+  // "The newest three" is only meaningful across the whole feed. Inside a
+  // filtered subset it would just be the first three of a short list.
+  const featured = category === 'all' ? items.slice(0, 3) : []
+  const rest = category === 'all' ? items.slice(3) : items
 
   return (
     <Section
       eyebrow="News"
-      title="The archive"
-      lead="Defenses, publications, awards, talks and press."
+      title="What has been happening."
+      lead="Publications, awards, competitions, defenses and press, newest first."
     >
-      <div className="flex flex-wrap gap-2">
-        {CATEGORIES.map((c) => (
-          <button
-            key={c.id}
-            type="button"
-            onClick={() => setCategory(c.id)}
-            className={`rounded-full border px-3 py-1.5 font-mono text-[11px] tracking-wide transition-colors ${
-              category === c.id
-                ? 'border-signal-500 bg-signal-500/15 text-signal-300'
-                : 'border-ink-700 text-slate-400 hover:border-ink-600 hover:text-slate-200'
-            }`}
+      <div className="flex flex-wrap items-center gap-2">
+        <Chip active={category === 'all'} onClick={() => setCategory('all')}>
+          Everything
+        </Chip>
+        {present.map((c) => (
+          <Chip
+            key={c}
+            active={category === c}
+            color={NEWS_CATEGORY[c].color}
+            onClick={() => setCategory(c)}
           >
-            {c.label}
-          </button>
+            {NEWS_CATEGORY[c].label}
+          </Chip>
         ))}
+        <p className="ml-auto font-mono text-xs text-slate-500">
+          {items.length} of {news.length}
+        </p>
       </div>
 
-      <ol className="mt-10 space-y-4">
-        {items.map((item) => (
-          <NewsCard key={item.id} item={item} />
-        ))}
-      </ol>
+      {featured.length > 0 && (
+        <div className="mt-10 grid gap-5">
+          {featured.map((item) => (
+            <NewsCard key={item.id} item={item} wide />
+          ))}
+        </div>
+      )}
+
+      {rest.length > 0 && (
+        <div
+          className={`grid gap-5 md:grid-cols-2 lg:grid-cols-3 ${featured.length > 0 ? 'mt-5' : 'mt-10'}`}
+        >
+          {rest.map((item) => (
+            <NewsCard key={item.id} item={item} />
+          ))}
+        </div>
+      )}
 
       {items.length === 0 && (
-        <p className="mt-12 text-sm text-slate-500">Nothing in that category yet.</p>
+        <p className="mt-12 text-sm text-slate-500">
+          Nothing in that category yet.{' '}
+          <button
+            type="button"
+            onClick={() => setCategory('all')}
+            className="text-signal-400 transition-colors hover:text-signal-300"
+          >
+            Show everything
+          </button>
+          .
+        </p>
       )}
     </Section>
   )
 }
 
-function NewsCard({ item }: { item: NewsItem }) {
-  // Either the item's own image, or the figure from the paper it announces.
-  const image = newsImage(item)
-
-  const body = (
-    <>
-      <p className="font-mono text-xs text-slate-600">
-        {formatNewsDate(item.date, item.monthOnly)}
-        <span className="mx-2 text-ink-700">/</span>
-        <span className="tracking-wider uppercase">{item.category}</span>
-      </p>
-
-      <h3 className="mt-2.5 text-lg leading-snug font-medium text-slate-100">{item.title}</h3>
-
-      {item.body && (
-        <p className="mt-2.5 text-sm leading-relaxed text-slate-400">{item.body}</p>
-      )}
-
-      {item.tracks && item.tracks.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {item.tracks.map((t) => (
-            <TrackBadge key={t} id={t} static />
-          ))}
-        </div>
-      )}
-    </>
-  )
-
+function Chip({
+  active,
+  color,
+  onClick,
+  children,
+}: {
+  active: boolean
+  color?: string
+  onClick: () => void
+  children: React.ReactNode
+}) {
   return (
-    <li>
-      <article
-        className={`group overflow-hidden rounded-xl border border-ink-700/60 bg-ink-900/40 transition-colors hover:border-ink-600 ${
-          image ? 'grid sm:grid-cols-[16rem_minmax(0,1fr)]' : ''
-        }`}
-      >
-        {image &&
-          (image.kind === 'figure' ? (
-            // Paper artifacts, title blocks and diagrams alike, are
-            // black-on-white. Framed as a document rather than a hole in the
-            // dark layout, and contained so nothing is cropped.
-            <div className="paper flex items-center p-4 sm:p-5">
-              <img
-                src={assetUrl(image.src)}
-                alt=""
-                loading="lazy"
-                className="w-full object-contain"
-              />
-            </div>
-          ) : (
-            <div className="aspect-video overflow-hidden bg-ink-850 sm:aspect-auto">
-              <img
-                src={assetUrl(image.src)}
-                alt=""
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-              />
-            </div>
-          ))}
-
-        <div className="p-6">
-          {item.href?.startsWith('/') ? (
-            <Link to={item.href} className="block">
-              {body}
-              <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-slate-500 transition-colors group-hover:text-signal-300">
-                Read more <span aria-hidden="true">&rarr;</span>
-              </span>
-            </Link>
-          ) : (
-            body
-          )}
-        </div>
-      </article>
-    </li>
+    <button
+      type="button"
+      onClick={onClick}
+      className={`rounded-full border px-3.5 py-1.5 font-mono text-[11px] tracking-wide transition-colors ${
+        active
+          ? 'text-slate-50'
+          : 'border-ink-700 text-slate-500 hover:border-ink-600 hover:text-slate-200'
+      }`}
+      style={
+        active
+          ? {
+              borderColor: `color-mix(in srgb, ${color ?? 'var(--color-signal-400)'} 55%, transparent)`,
+              backgroundColor: `color-mix(in srgb, ${color ?? 'var(--color-signal-400)'} 16%, transparent)`,
+            }
+          : undefined
+      }
+    >
+      {children}
+    </button>
   )
 }

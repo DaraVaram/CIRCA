@@ -55,7 +55,7 @@ export default function PersonDetail() {
                     rel="noreferrer"
                     className="text-sm text-signal-400 transition-colors hover:text-signal-300"
                   >
-                    {l.label} &nearr;
+                    {l.label} {'↗'}
                   </a>
                 </li>
               ))}

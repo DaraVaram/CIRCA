@@ -8,15 +8,14 @@ dist
 # because Pages requires it to be public, and these files carry the full CV,
 # student rosters and undergraduate employment records.
 Website.zip
+alhajri-labsite.zip
 extracted/
-# Leading slash anchors this to the repo root. Without it the pattern also
-# matches public/images/pi/mohamed-alhajri.jpg
+labsite/
 
 # Source figures, 17 MB of originals. scripts/optimize-figures.py turns these
-# into the 1400x467 webp files under public/images/papers/, which are committed.
-PublicationPictures/, which the site needs.
-/mohamed-alhajri.jpg
-
-# Source figures, 17 MB of originals. scripts/optimize-figures.py turns these
-# into the 1400x467 webp files under public/images/papers/, which are committed.
+# into the webp files under public/images/papers/, which are committed.
 PublicationPictures/
+
+# Leading slash anchors this to the repo root. Without it the pattern would
+# also match public/images/pi/mohamed-alhajri.jpg, which the site needs.
+/mohamed-alhajri.jpg

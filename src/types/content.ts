@@ -92,23 +92,38 @@ export interface Member {
 export type NewsCategory =
   | 'publication'
   | 'award'
-  | 'defense'
-  | 'talk'
-  | 'media'
-  | 'grant'
+  | 'competition'
+  | 'people'
+  | 'venture'
   | 'milestone'
 
 export interface NewsItem {
   id: string
-  /** ISO date. Use YYYY-MM-01 when only the month is known. */
+  /** ISO date. Pad with 01 for the parts that are not known. */
   date: string
-  /** True when only the month is known. The UI then hides the day. */
-  monthOnly?: boolean
+  /**
+   * How much of the date is real. Some items are only known to the year, and
+   * printing "1 January" for those would be a fabrication.
+   */
+  datePrecision?: 'day' | 'month' | 'year'
   category: NewsCategory
   title: string
   body?: string
   tracks?: TrackId[]
-  /** Link into the site (/publications#J8) or out to press. */
+  /** Attribution line under the card: authors, venue, or awarding body. */
+  source?: string
+  /**
+   * The publication this item announces. The card then links straight to the
+   * paper through its DOI and can inherit its figure, which is what makes a
+   * publication announcement useful rather than a pointer to a list.
+   */
+  publication?: string
+  /**
+   * A link to the work itself when there is no publication record for it yet,
+   * such as an arXiv preprint.
+   */
+  externalUrl?: string
+  /** Link into the site, used when neither of the above applies. */
   href?: string
   image?: string
   /**
@@ -139,6 +154,15 @@ export interface Collaborator {
 }
 
 /** Senior design and capstone projects, the applied and industry-facing record. */
+/**
+ * Something a capstone team achieved. `kind` ranks it, so the page can make a
+ * founded company or a published paper louder than a competition placing.
+ */
+export interface ProjectOutcome {
+  text: string
+  kind?: 'venture' | 'publication' | 'award' | 'grant' | 'patent' | 'dataset'
+}
+
 export interface Project {
   id: string
   title: string
@@ -146,9 +170,41 @@ export interface Project {
   term: string
   students: string[]
   tracks: TrackId[]
-  awards: string[]
+  outcomes: ProjectOutcome[]
   industrySponsor: boolean
   undergraduateResearchGrant: boolean
+  /** Set when the project has its own page section, e.g. Shaheen or ORCA. */
+  system?: string
+}
+
+/** A system built in the group and taken into the field. */
+export interface SystemProject {
+  id: string
+  index: string
+  name: string
+  /** Shown above the name, e.g. "System 01 - Shaheen". */
+  eyebrow: string
+  headline: string
+  lede: string
+  /** The one sentence that reframes the problem. Rendered as a pull quote. */
+  pullQuote: string
+  body: string
+  accentTrack: TrackId
+  image?: string
+  imageAlt?: string
+  kpis: { value: string; label: string }[]
+  components?: { index: string; title: string; body: string }[]
+  recognition?: string[]
+  team?: { members: string[]; note: string; image?: string; imageAlt?: string }
+  /** Closing argument about where the defensible advantage sits. */
+  note?: string
+  /** Present when the system has been spun out. */
+  venture?: {
+    name: string
+    lede: string
+    benefits: { title: string; body: string }[]
+    teamNote: string
+  }
 }
 
 /** The PI profile, assembled from the CV. Lives in `data/pi.json`. */
