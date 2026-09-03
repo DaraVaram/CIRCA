@@ -19,6 +19,8 @@ const Publications = lazy(() => import('@/pages/Publications'))
 const News = lazy(() => import('@/pages/News'))
 const Contact = lazy(() => import('@/pages/Contact'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
+// Scratch page for choosing typography and the hero background. Not in the nav.
+const Preview = lazy(() => import('@/pages/Preview'))
 
 /** Holds the page height while a route chunk loads, so the footer does not jump. */
 function RouteFallback() {
@@ -46,6 +48,7 @@ export default function App() {
                 <Route path="publications" element={<Publications />} />
                 <Route path="news" element={<News />} />
                 <Route path="contact" element={<Contact />} />
+                <Route path="preview" element={<Preview />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
