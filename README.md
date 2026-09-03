@@ -171,19 +171,42 @@ before first paint, so there is no flash of the wrong theme.
 
 ## The hero background
 
-`FlowField` releases particles across the frame and walks them down the gradient
-of a drifting potential, leaving trails. It is the same picture the optimization
-demo draws with two paths, run with a few thousand. Trails come from washing the
-previous frame at low alpha rather than clearing it, which is cheap and gives the
-streaks their length for free.
+`FieldBackdrop` draws contour lines with descent trajectories running across
+them. Both halves come from one scalar field: the contours are its level sets
+and the streaks follow its gradient, so the streaks cross the contours at right
+angles because that is what a gradient does. It is the same picture the
+optimization demo draws with two paths, at wall scale.
 
-Particle count scales with the canvas area, because density rather than count is
-what makes the field read. A fixed count spread over a wide hero thins out until
-the streaks vanish.
+While the pointer is over the field, most new trajectories are released at the
+cursor, so moving the mouse feeds the flow and the streaks run downhill away
+from it.
+
+Four things keep it cheap. The first version stroked once per particle, which
+is what made it slow:
+
+- **Segments are batched.** Every segment goes into one `Path2D` per color and
+  alpha bucket, and each path is stroked once. A frame costs a fixed handful of
+  stroke calls regardless of particle count. This took stroke calls from roughly
+  126,000 per second to about 400.
+- **The field is a shared grid.** Values and gradient are sampled onto one
+  56 by 38 grid, and the per-particle gradient is a bilinear read off it rather
+  than a fresh evaluation of every well.
+- **The layers run at different rates.** Contours drift slowly, so they redraw
+  at 5 fps and the shared field is recomputed on the same cadence. Flow runs at
+  20 fps on its own canvas at 0.62 scale, since the streaks are soft.
+- **It stops when nobody is looking.** An IntersectionObserver and
+  `document.hidden` both gate the loop.
+
+One detail worth keeping: trails fade with `destination-out` rather than by
+washing the page color over them. An opaque wash converges to a solid sheet,
+which silently buried the contour layer underneath.
+
+Measured on a 1273 by 1216 field: median frame 6.9 ms, p95 7.2 ms, and about
+1.4 ms of that is the flow step, against a 50 ms budget at 20 fps.
 
 Two earlier attempts are in the history if they are ever wanted: `AuroraField`,
-a soft gradient field with grain, and `ContourField`, the level sets of a
-drifting surface drawn with marching squares. Recover either with
+a soft gradient field with grain, and `FlowField`, the streaks without the
+contours. Recover either with
 `git show a1c12b1:src/components/viz/ContourField.tsx`.
 
 ## Research track demos

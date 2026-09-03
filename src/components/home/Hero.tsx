@@ -4,7 +4,7 @@ import { siteConfig } from '@/site.config'
 import { tracks } from '@/lib/content'
 import { metrics } from '@/lib/metrics'
 import { trackVar } from '@/lib/theme'
-import FlowField from '@/components/viz/FlowField'
+import FieldBackdrop from '@/components/viz/FieldBackdrop'
 
 const fade = {
   hidden: { opacity: 0, y: 14 },
@@ -18,8 +18,8 @@ const fade = {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Descent trajectories over a drifting potential, sitting to the right and
-          masked away from the copy so the headline never fights it for contrast. */}
+      {/* Contours with descent trajectories running across them, sitting to the
+          right and masked away from the copy so the headline never fights it. */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="absolute inset-0 bg-grid opacity-60" />
         <div
@@ -31,7 +31,7 @@ export default function Hero() {
               'radial-gradient(62% 70% at 74% 46%, #000 22%, rgba(0,0,0,0.5) 55%, transparent 82%)',
           }}
         >
-          <FlowField />
+          <FieldBackdrop />
         </div>
         <div className="absolute inset-y-0 left-0 w-[62%] bg-gradient-to-r from-ink-950 via-ink-950 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink-950 to-transparent" />
