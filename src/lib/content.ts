@@ -47,6 +47,28 @@ const destinationByName = new Map(undergraduates.map((u) => [u.name, u]))
 /** Where an undergraduate went after the capstone, if we know. */
 export const destinationFor = (name: string) => destinationByName.get(name)
 
+/**
+ * The capstone team a member ran before joining the group, if they came up that
+ * way. Two of the current graduate researchers did, which is the clearest
+ * evidence the undergraduate pipeline actually feeds the group, so it is worth
+ * deriving rather than restating by hand in two places.
+ */
+export function capstoneOriginFor(member: Member): Project | undefined {
+  const target = authorKey(member.name)
+  return projects.find((p) => p.students.some((s) => authorKey(s) === target))
+}
+
+/** Capstone projects grouped by academic year, newest first. */
+export const projectsByCohort = Array.from(
+  projects.reduce((acc, p) => {
+    const list = acc.get(p.term) ?? []
+    list.push(p)
+    acc.set(p.term, list)
+    return acc
+  }, new Map<string, Project[]>()),
+).sort((a, b) => b[0].localeCompare(a[0]))
+
+
 /** Every student who has run a capstone project with the group. */
 export const undergraduateCount = new Set(projects.flatMap((p) => p.students)).size
 export const scholar = scholarRaw as {
@@ -92,6 +114,12 @@ const memberByAuthorKey = new Map(members.map((m) => [authorKey(m.name), m]))
 
 export const memberForAuthor = (author: string): Member | undefined =>
   memberByAuthorKey.get(authorKey(author))
+
+/** Members who arrived through a capstone team, newest cohort first. */
+export const membersFromCapstone = members
+  .map((m) => ({ member: m, project: capstoneOriginFor(m) }))
+  .filter((x): x is { member: Member; project: Project } => Boolean(x.project))
+  .sort((a, b) => b.project.year - a.project.year)
 
 // ---------------------------------------------------------------- queries
 
@@ -231,3 +259,15 @@ export function buildCoauthorshipGraph() {
 
   return { nodes: [...nodes.values()], links: [...links.values()] }
 }
+
+/** Researchers ordered by seniority, so the hierarchy reads without headings. */
+const ROLE_ORDER: Record<Member['role'], number> = {
+  pi: 0,
+  phd: 1,
+  msc: 2,
+  'research-assistant': 3,
+  undergraduate: 4,
+}
+export const researchers = currentMembers
+  .slice()
+  .sort((a, b) => ROLE_ORDER[a.role] - ROLE_ORDER[b.role] || a.name.localeCompare(b.name))

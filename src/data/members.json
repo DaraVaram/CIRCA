@@ -33,9 +33,10 @@
     "program": "PhD Student in Robotics",
     "photo": "/images/members/Omar_Alsuwaidi.jpeg",
     "tracks": [
+      "optimization",
       "applied"
     ],
-    "currentProject": "Robotics.",
+    "currentProject": "Optimization for robotics, where the constraints are physical.",
     "links": []
   },
   {
@@ -128,7 +129,7 @@
     "gradYear": 2026,
     "thesisTitle": "Priority-Constrained Descent: Hierarchical Multi-Objective Optimization",
     "thesisAbstract": "Many deep learning problems involve objectives that are inherently hierarchical rather than equally important. In such settings, a primary task objective must be optimized while secondary objectives impose additional constraints such as regularization, sparsity, robustness, or compression. Existing multi-objective optimization methods typically treat all objectives symmetrically, making them susceptible to conflict equilibria where gradients cancel despite the absence of true convergence in any individual objective. This thesis introduces Priority-Constrained Descent (PCD), a gradient-based optimization framework designed specifically for hierarchical objective structures. PCD preserves the descent direction of the primary objective while modifying it only as much as necessary to guarantee progress on the secondary objectives. Formally, each update is computed as the minimum-deviation direction from the primary gradient subject to constrained descent conditions on the secondary objectives, controlled by a single parameter, tau in [0, 1]. The proposed formulation admits closed-form solutions for two- and three-objective settings, is invariant to per-objective scaling, and converges only to composite multi-stationary points where all objectives are individually stationary, yielding a condition strictly stronger than Pareto stationarity. We evaluate PCD on structured neural network compression, asymmetric multi-task learning with up to five objectives, and synthetic bi-objective optimization problems with known Pareto fronts. Experimental results show that varying tau produces smooth and interpretable trade-off behavior, enabling stable control over competing objectives while consistently preserving strong primary-task performance.",
-    "currentProject": "Priority-constrained descent, the optimizer behind the homepage demo.",
+    "currentProject": "Priority-constrained descent for hierarchical multi-objective optimization.",
     "destination": {
       "role": "PhD Student",
       "org": "EPFL"

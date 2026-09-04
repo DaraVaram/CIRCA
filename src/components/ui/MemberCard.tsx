@@ -62,7 +62,11 @@ export default function MemberCard({ member }: { member: Member }) {
 
       {member.destination && (
         <div className="mt-auto w-full border-t border-ink-800 pt-3.5">
-          <p className="font-mono text-[9.5px] tracking-[0.14em] text-slate-600 uppercase">Now</p>
+          {/* Several current researchers also hold industry roles. Labelling
+              those "Now" read as though they had left the group. */}
+          <p className="font-mono text-[9.5px] tracking-[0.14em] text-slate-600 uppercase">
+            {member.status === 'alumni' ? 'Now' : 'Also'}
+          </p>
           <p className="mt-1 text-[11.5px] leading-snug text-slate-400">
             {member.destination.role}
             {member.destination.org ? `, ${member.destination.org}` : ''}
