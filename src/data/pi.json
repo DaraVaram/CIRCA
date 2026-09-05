@@ -99,7 +99,8 @@
       "title": "Advanced Machine Learning",
       "level": "MSc",
       "terms": ["Fall 2024", "Fall 2025", "Fall 2026"],
-      "description": "Machine learning concepts and data pre-processing, including aggregation, dimensionality reduction, feature selection, and measures of data similarity. Supervised learning with Naive Bayes, SVM, feedforward, convolutional and LSTM networks. Semi-supervised learning including GANs and consistency regularization. Unsupervised methods including K-Medoids, Gaussian mixtures and autoencoders. Ensemble learning and model evaluation."
+      "description": "Machine learning concepts and data pre-processing, including aggregation, dimensionality reduction, feature selection, and measures of data similarity. Supervised learning with Naive Bayes, SVM, feedforward, convolutional and LSTM networks. Semi-supervised learning including GANs and consistency regularization. Unsupervised methods including K-Medoids, Gaussian mixtures and autoencoders. Ensemble learning and model evaluation.",
+      "url": "https://mlr570.github.io"
     },
     {
       "code": "COE 375",

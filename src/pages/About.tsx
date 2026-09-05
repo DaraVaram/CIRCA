@@ -98,8 +98,15 @@ export default function About() {
                 <p className="eyebrow">Teaching</p>
                 <ul className="mt-3 space-y-3 text-sm text-slate-400">
                   <li>
-                    <span className="text-slate-200">MLR 570</span>. Advanced Machine
-                    Learning (MSc)
+                    <a
+                      href="https://mlr570.github.io"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-slate-200 transition-colors hover:text-signal-400"
+                    >
+                      MLR 570 <span aria-hidden="true">{'↗'}</span>
+                    </a>
+                    . Advanced Machine Learning (MSc)
                   </li>
                   <li>
                     <span className="text-slate-200">COE 375</span>. Modeling and

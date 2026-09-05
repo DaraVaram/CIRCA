@@ -179,7 +179,7 @@ export default function PrincipalInvestigator() {
           {p.teaching.map((c) => (
             <article
               key={c.code}
-              className="rounded-xl border border-ink-700/60 bg-ink-900/40 p-6"
+              className="flex flex-col rounded-xl border border-ink-700/60 bg-ink-900/40 p-6"
             >
               <div className="flex items-baseline justify-between gap-3">
                 <p className="font-mono text-sm text-signal-400">{c.code}</p>
@@ -188,8 +188,24 @@ export default function PrincipalInvestigator() {
                 </span>
               </div>
               <h3 className="mt-3 text-lg leading-snug font-medium text-slate-100">{c.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-400">{c.description}</p>
-              <p className="mt-4 font-mono text-[11px] text-slate-600">{c.terms.join(', ')}</p>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
+                {c.description}
+              </p>
+              {/* Terms and the course site share a baseline, so a course with
+                  no site of its own loses nothing but the link. */}
+              <div className="mt-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <p className="font-mono text-[11px] text-slate-600">{c.terms.join(', ')}</p>
+                {c.url && (
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-mono text-[11px] text-signal-400 transition-colors hover:text-signal-300"
+                  >
+                    Course site <span aria-hidden="true">{'↗'}</span>
+                  </a>
+                )}
+              </div>
             </article>
           ))}
         </div>

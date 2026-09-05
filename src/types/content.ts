@@ -237,6 +237,8 @@ export interface PiProfile {
     level: string
     terms: string[]
     description: string
+    /** The course's own site, where one exists. */
+    url?: string
   }[]
   awards: { year: string; text: string }[]
   seminarSeries: { title: string; role: string; years: string; points: string[] }
