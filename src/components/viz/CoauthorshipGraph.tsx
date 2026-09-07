@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   forceCollide,
@@ -46,13 +46,13 @@ function shortName(name: string): string {
 
 export default function CoauthorshipGraph() {
   const navigate = useNavigate()
-  const [, setSettled] = useState(0)
   const [hovered, setHovered] = useState<string | null>(null)
   const [selected, setSelected] = useState<string | null>(null)
-  const viewBoxRef = useRef(`0 0 ${WIDTH} ${HEIGHT}`)
 
-  // Built once. The simulation mutates these objects in place.
-  const { nodes, links } = useMemo(() => {
+  // Built and laid out together, before the first paint. d3 only assigns x and
+  // y once the simulation owns the nodes, so laying out in an effect meant
+  // React painted one frame of `translate(undefined undefined)` first.
+  const { nodes, links, viewBox } = useMemo(() => {
     const graph = buildCoauthorshipGraph()
     const nodes: Node[] = graph.nodes.map((n) => ({ ...n }))
     const byId = new Map(nodes.map((n) => [n.id, n]))
@@ -62,10 +62,7 @@ export default function CoauthorshipGraph() {
       if (!source || !target) return []
       return [{ source, target, weight: l.weight, publications: l.publications }]
     })
-    return { nodes, links }
-  }, [])
 
-  useEffect(() => {
     const simulation: Simulation<Node, Link> = forceSimulation<Node>(nodes)
       .force(
         'link',
@@ -102,20 +99,17 @@ export default function CoauthorshipGraph() {
       maxX = Math.max(maxX, (n.x ?? 0) + r)
       maxY = Math.max(maxY, (n.y ?? 0) + r)
     }
-    if (Number.isFinite(minX)) {
-      viewBoxRef.current = [
-        minX - PADDING,
-        minY - PADDING,
-        maxX - minX + PADDING * 2,
-        maxY - minY + PADDING * 2,
-      ].join(' ')
-    }
+    const viewBox = Number.isFinite(minX)
+      ? [
+          minX - PADDING,
+          minY - PADDING,
+          maxX - minX + PADDING * 2,
+          maxY - minY + PADDING * 2,
+        ].join(' ')
+      : `0 0 ${WIDTH} ${HEIGHT}`
 
-    setSettled((n) => n + 1)
-    return () => {
-      simulation.stop()
-    }
-  }, [nodes, links])
+    return { nodes, links, viewBox }
+  }, [])
 
   const neighbors = useMemo(() => {
     const map = new Map<string, Set<string>>()
@@ -152,7 +146,7 @@ export default function CoauthorshipGraph() {
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_18rem]">
         <div className="overflow-hidden rounded-xl border border-ink-700/60 bg-ink-900/40">
           <svg
-            viewBox={viewBoxRef.current}
+            viewBox={viewBox}
             className="h-auto w-full"
             role="img"
             aria-label={`Co-authorship network of ${nodes.length} authors connected by ${links.length} joint publications.`}

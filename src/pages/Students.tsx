@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom'
 import Section from '@/components/ui/Section'
 import ProjectCard from '@/components/ui/ProjectCard'
-import { membersFromCapstone, projectsByCohort, undergraduates } from '@/lib/content'
+import {
+  membersFromCapstone,
+  projectsByCohort,
+  undergraduateDestinations,
+} from '@/lib/content'
 import { impact } from '@/lib/metrics'
 import { assetUrl } from '@/lib/assets'
 
@@ -16,7 +20,7 @@ function initials(name: string): string {
 }
 
 export default function Students() {
-  const known = undergraduates.filter((u) => u.role)
+  const known = undergraduateDestinations
 
   return (
     <>

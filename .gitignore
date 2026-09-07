@@ -20,3 +20,7 @@ PublicationPictures/
 # also match public/images/pi/mohamed-alhajri.jpg, which the site needs.
 /mohamed-alhajri.jpg
 /Kenzy.jpg
+
+# Roster of named undergraduates and their employers, including the ones with
+# no destination recorded. The site publishes only the destinations it knows.
+/Undergraduate_Students_List_Jobs.xlsx

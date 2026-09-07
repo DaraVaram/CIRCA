@@ -121,6 +121,15 @@ export const membersFromCapstone = members
   .filter((x): x is { member: Member; project: Project } => Boolean(x.project))
   .sort((a, b) => b.project.year - a.project.year)
 
+/**
+ * Undergraduate destinations to list on the students page. Two of them stayed
+ * on as graduate researchers and are already shown above that list with their
+ * own cards, so they are dropped here rather than appearing twice.
+ */
+export const undergraduateDestinations = undergraduates.filter(
+  (u) => !memberByAuthorKey.has(authorKey(u.name)),
+)
+
 // ---------------------------------------------------------------- queries
 
 export const publicationsForTrack = (id: TrackId) =>
