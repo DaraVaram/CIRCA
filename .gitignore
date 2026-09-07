@@ -19,3 +19,4 @@ PublicationPictures/
 # Leading slash anchors this to the repo root. Without it the pattern would
 # also match public/images/pi/mohamed-alhajri.jpg, which the site needs.
 /mohamed-alhajri.jpg
+/Kenzy.jpg
