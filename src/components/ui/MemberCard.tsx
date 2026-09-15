@@ -53,7 +53,7 @@ export default function MemberCard({ member }: { member: Member }) {
       )}
 
       {member.tracks.length > 0 && (
-        <div className="mt-4 flex flex-wrap justify-center gap-1.5">
+        <div className="mt-4 mb-5 flex flex-wrap justify-center gap-1.5">
           {member.tracks.map((t) => (
             <TrackBadge key={t} id={t} static />
           ))}
