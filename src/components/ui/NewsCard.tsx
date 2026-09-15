@@ -8,7 +8,7 @@ import type { NewsCategory, NewsItem } from '@/types/content'
 /** Category colors reuse the track palette, so the whole site stays one system. */
 const CATEGORY: Record<NewsCategory, { label: string; color: string }> = {
   publication: { label: 'Publication', color: 'var(--color-signal-400)' },
-  award: { label: 'Award', color: 'var(--color-track-efficient-ml)' },
+  accomplishment: { label: 'Accomplishment', color: 'var(--color-track-efficient-ml)' },
   competition: { label: 'Competition', color: 'var(--color-track-wireless)' },
   people: { label: 'People', color: 'var(--color-track-generative)' },
   venture: { label: 'Venture', color: 'var(--color-track-applied)' },
@@ -104,7 +104,7 @@ export default function NewsCard({ item, wide = false }: Props) {
         )}
 
         {item.tracks && item.tracks.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-1.5">
+          <div className="mt-4 mb-5 flex flex-wrap gap-1.5">
             {item.tracks.map((t) => (
               <TrackBadge key={t} id={t} static />
             ))}

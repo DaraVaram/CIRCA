@@ -38,26 +38,12 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-20">
-        <motion.p
-          custom={0}
-          initial="hidden"
-          animate="show"
-          variants={fade}
-          className="inline-flex items-center gap-2.5 rounded-full border border-ink-700/70 bg-ink-900/70 px-4 py-2 font-mono text-[10.5px] tracking-[0.12em] text-slate-500 uppercase backdrop-blur"
-        >
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-signal-400 opacity-70" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-signal-500" />
-          </span>
-          {siteConfig.name} at the {siteConfig.pi.institution}
-        </motion.p>
-
         <motion.h1
           custom={1}
           initial="hidden"
           animate="show"
           variants={fade}
-          className="mt-7 text-5xl leading-[1.02] font-bold tracking-tight text-slate-50 sm:text-6xl lg:text-7xl"
+          className="text-5xl leading-[1.02] font-bold tracking-tight text-slate-50 sm:text-6xl lg:text-7xl"
         >
           Intelligence,
           <br />

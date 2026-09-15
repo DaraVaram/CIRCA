@@ -7,7 +7,7 @@ import type { NewsCategory } from '@/types/content'
 
 const ORDER: NewsCategory[] = [
   'publication',
-  'award',
+  'accomplishment',
   'competition',
   'people',
   'venture',
@@ -48,7 +48,7 @@ export default function News() {
     <Section
       eyebrow="News"
       title="What has been happening."
-      lead="Publications, awards, competitions, defenses and press, newest first."
+      lead="Publications, accomplishments, competitions and press, newest first."
     >
       <div className="flex flex-wrap items-center gap-2">
         <Chip active={category === 'all'} onClick={() => setCategory('all')}>

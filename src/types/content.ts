@@ -91,7 +91,7 @@ export interface Member {
 
 export type NewsCategory =
   | 'publication'
-  | 'award'
+  | 'accomplishment'
   | 'competition'
   | 'people'
   | 'venture'
