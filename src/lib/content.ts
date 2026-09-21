@@ -185,6 +185,7 @@ export function newsLink(item: NewsItem): NewsLink | null {
     }
   }
   const pub = publicationForNews(item)
+  if (pub?.project) return { href: pub.project, external: true, label: 'Project page' }
   if (pub?.url) {
     return {
       href: pub.url,

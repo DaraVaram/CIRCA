@@ -46,6 +46,10 @@ export interface Publication {
   doi?: string
   url?: string
   pdf?: string
+  /** The paper's own project page, when it has one. */
+  project?: string
+  /** Public code repository. */
+  code?: string
   /** Masthead or figure image, shown on the publication row when present. */
   figure?: string
   /** Free-text honors, e.g. "Most Popular Article for 18 months". */

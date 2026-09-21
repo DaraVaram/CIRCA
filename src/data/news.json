@@ -1,5 +1,17 @@
 [
   {
+    "id": "n34",
+    "date": "2026-09-21",
+    "datePrecision": "month",
+    "category": "publication",
+    "title": "Priority-Constrained Descent accepted in TMLR",
+    "body": "The group's framework for hierarchical multi-objective optimization is accepted in Transactions on Machine Learning Research, the first of the group's MSc theses to be published. PCD keeps the descent direction of the primary objective and bends it only as far as needed to guarantee progress on the secondary ones. The project page has a video walkthrough, and the code is open source.",
+    "source": "Varam and AlHajri, Transactions on Machine Learning Research",
+    "tracks": ["optimization"],
+    "publication": "J15",
+    "featured": true
+  },
+  {
     "id": "n32",
     "date": "2026-09-10",
     "datePrecision": "day",
@@ -23,19 +35,6 @@
     "href": "/people/dara-varam",
     "image": "/images/news/n-dara-cen-awards.jpg",
     "imageKind": "photo",
-    "featured": true
-  },
-  {
-    "id": "n31",
-    "date": "2026-06-01",
-    "datePrecision": "month",
-    "category": "publication",
-    "title": "Priority-Constrained Descent posted to arXiv",
-    "body": "The group's optimization framework for hierarchical objectives goes public. PCD preserves the descent direction of the primary objective and modifies it only as far as necessary to guarantee progress on the secondary ones, converging to a condition strictly stronger than Pareto stationarity.",
-    "source": "Varam and AlHajri, under review at TMLR",
-    "tracks": ["optimization"],
-    "publication": "J15",
-    "externalUrl": "https://arxiv.org/abs/2606.29521",
     "featured": true
   },
   {

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import TrackBadge from './TrackBadge'
-import { newsImage, newsLink } from '@/lib/content'
+import { newsImage, newsLink, publicationForNews } from '@/lib/content'
 import { formatNewsDate } from '@/lib/format'
 import { assetUrl } from '@/lib/assets'
 import type { NewsCategory, NewsItem } from '@/types/content'
@@ -24,6 +24,7 @@ interface Props {
 export default function NewsCard({ item, wide = false }: Props) {
   const image = newsImage(item)
   const link = newsLink(item)
+  const code = publicationForNews(item)?.code
   const cat = CATEGORY[item.category]
 
   return (
@@ -114,6 +115,16 @@ export default function NewsCard({ item, wide = false }: Props) {
         {(item.source || link) && (
           <div className="mt-auto flex items-baseline justify-between gap-3 border-t border-ink-800 pt-3.5 text-xs">
             <span className="text-slate-600">{item.source}</span>
+            {code && (
+              <a
+                href={code}
+                target="_blank"
+                rel="noreferrer"
+                className="ml-auto shrink-0 font-medium whitespace-nowrap text-slate-500 transition-colors hover:text-signal-400"
+              >
+                Code <span aria-hidden="true">{'↗'}</span>
+              </a>
+            )}
             {link &&
               (link.external ? (
                 <a

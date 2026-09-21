@@ -15,6 +15,8 @@ const KIND_LABEL: Record<Publication['kind'], string> = {
 }
 
 export default function PublicationRow({ publication }: { publication: Publication }) {
+  const titleHref = publication.url ?? publication.project
+
   return (
     <li id={publication.id} className="scroll-mt-24 py-6">
       <div className="flex flex-wrap items-center gap-2">
@@ -34,9 +36,9 @@ export default function PublicationRow({ publication }: { publication: Publicati
       </div>
 
       <h3 className="mt-3 max-w-3xl text-base leading-snug font-medium text-slate-100">
-        {publication.url ? (
+        {titleHref ? (
           <a
-            href={publication.url}
+            href={titleHref}
             target="_blank"
             rel="noreferrer"
             className="transition-colors hover:text-signal-400"
@@ -94,6 +96,26 @@ export default function PublicationRow({ publication }: { publication: Publicati
             className="font-mono text-[11px] text-slate-500 transition-colors hover:text-signal-400"
           >
             View record
+          </a>
+        )}
+        {publication.project && (
+          <a
+            href={publication.project}
+            target="_blank"
+            rel="noreferrer"
+            className="font-mono text-[11px] text-slate-500 transition-colors hover:text-signal-400"
+          >
+            Project page
+          </a>
+        )}
+        {publication.code && (
+          <a
+            href={publication.code}
+            target="_blank"
+            rel="noreferrer"
+            className="font-mono text-[11px] text-slate-500 transition-colors hover:text-signal-400"
+          >
+            Code
           </a>
         )}
         <CopyButton label="BibTeX" value={toBibTeX(publication)} />

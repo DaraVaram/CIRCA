@@ -2,17 +2,19 @@
   {
     "id": "J15",
     "kind": "journal",
-    "status": "submitted",
+    "status": "published",
     "title": "Not All Objectives Are Born Equal: Priority-Constrained Descent for Hierarchical Multi-Objective Optimization",
     "authors": [
       "Dara Varam",
       "Mohamed I. AlHajri"
     ],
     "venue": "Transactions on Machine Learning Research",
-    "year": null,
+    "year": 2026,
     "tracks": [
       "optimization"
     ],
+    "project": "https://daravaram.github.io/PCD/",
+    "code": "https://github.com/DaraVaram/priority-constrained-descent",
     "figure": "/images/papers/J15.webp"
   },
   {
