@@ -44,7 +44,9 @@ export default function NewsCard({ item, wide = false }: Props) {
           {image.kind === 'figure' ? (
             // Paper artifacts have a baked-in white ground, so they get their
             // own surface and are contained rather than cropped.
-            <div className="paper flex aspect-video items-center justify-center p-3 sm:h-full">
+            <div
+              className={`paper flex aspect-video items-center justify-center p-3 ${wide ? 'sm:aspect-auto sm:h-full' : ''}`}
+            >
               <img
                 src={assetUrl(image.src)}
                 alt=""
@@ -53,7 +55,9 @@ export default function NewsCard({ item, wide = false }: Props) {
               />
             </div>
           ) : (
-            <div className="aspect-video overflow-hidden bg-ink-850 sm:h-full">
+            <div
+              className={`aspect-video overflow-hidden bg-ink-850 ${wide ? 'sm:aspect-auto sm:h-full' : ''}`}
+            >
               <img
                 src={assetUrl(image.src)}
                 alt=""
