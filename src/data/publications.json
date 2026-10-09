@@ -1,5 +1,26 @@
 [
   {
+    "id": "J16",
+    "kind": "journal",
+    "status": "published",
+    "title": "Comparative Assessment of ℓ1 and ℓ2 Minimization Algorithms for Period and Hidden Period Estimation",
+    "authors": [
+      "Shaik Basheeruddin Shah",
+      "Nazar T. Ali",
+      "Darko Ninkovic",
+      "Ahmed Altunaiji",
+      "Mohamed I. AlHajri",
+      "Dragan Olcan"
+    ],
+    "venue": "IEEE Access",
+    "year": 2026,
+    "tracks": [
+      "wireless"
+    ],
+    "doi": "10.1109/access.2026.3741588",
+    "url": "https://doi.org/10.1109/access.2026.3741588"
+  },
+  {
     "id": "J15",
     "kind": "journal",
     "status": "published",
@@ -74,7 +95,7 @@
   {
     "id": "J11",
     "kind": "journal",
-    "status": "submitted",
+    "status": "published",
     "title": "On the Combinatorial Vulnerability of Access Points in Wi-Fi Fingerprinting: Characterization and Efficient Identification",
     "authors": [
       "Muhammed Noshin",
@@ -83,7 +104,7 @@
       "Mohammad Zulkernine"
     ],
     "venue": "IEEE Access",
-    "year": null,
+    "year": 2026,
     "tracks": [
       "wireless",
       "applied"

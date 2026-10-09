@@ -1,5 +1,27 @@
 [
   {
+    "id": "n36",
+    "date": "2026-10-09",
+    "datePrecision": "month",
+    "category": "publication",
+    "title": "Combinatorial vulnerability of Wi-Fi access points accepted in IEEE Access",
+    "body": "A Wi-Fi fingerprinting system can depend far more on some combinations of access points than on others. The paper characterizes that combinatorial vulnerability and gives an efficient way to identify the access points whose loss hurts localization most.",
+    "source": "Noshin, Hannan, AlHajri and Zulkernine, IEEE Access",
+    "tracks": ["wireless", "applied"],
+    "publication": "J11"
+  },
+  {
+    "id": "n35",
+    "date": "2026-10-08",
+    "datePrecision": "month",
+    "category": "publication",
+    "title": "ℓ1 against ℓ2 minimization for period estimation, published in IEEE Access",
+    "body": "When is sparse recovery worth it for finding the period, or the hidden periods, of a signal? Over Ramanujan periodic dictionaries, the ℓ1 approach reaches accurate estimates with a smaller candidate period range than ℓ2 when the representation is sparse enough, and a tail-refined variant recovers multiple hidden periods. Validated on the MIT-BIH arrhythmia recordings.",
+    "source": "Shah, Ali, Ninkovic, Altunaiji, AlHajri and Olcan, IEEE Access",
+    "tracks": ["wireless"],
+    "publication": "J16"
+  },
+  {
     "id": "n34",
     "date": "2026-09-21",
     "datePrecision": "month",

@@ -27,7 +27,7 @@
     "coords": [54.4293, 24.439],
     "kind": "academic",
     "people": ["Nazar T. Ali", "Ahmed R. Kulaib", "Luis Weruaga", "Ahmed Altunaiji"],
-    "publications": ["J10", "J6", "J4", "J3", "J2", "J1", "J13", "C13", "C10", "C9", "C6", "C3", "C2", "C1", "T1"]
+    "publications": ["J16", "J10", "J6", "J4", "J3", "J2", "J1", "J13", "C13", "C10", "C9", "C6", "C3", "C2", "C1", "T1"]
   },
   {
     "id": "nyuad",
@@ -56,8 +56,8 @@
     "country": "Serbia",
     "coords": [20.4489, 44.8058],
     "kind": "academic",
-    "people": ["Dragan Olcan"],
-    "publications": ["J4"]
+    "people": ["Dragan Olcan", "Darko Ninkovic"],
+    "publications": ["J16", "J4"]
   },
   {
     "id": "bradford",
