@@ -175,7 +175,7 @@
     "datePrecision": "month",
     "category": "publication",
     "title": "A comprehensive survey of neural network quantization for microcontrollers",
-    "body": "Methods, platforms and applications gathered into one reference for anyone trying to put a real model on a real microcontroller. Posted to arXiv and under review at IEEE Access.",
+    "body": "Methods, platforms and applications gathered into one reference for anyone trying to put a real model on a real microcontroller. Posted to arXiv and under review at Artificial Intelligence Review.",
     "source": "Abushahla, Varam, Panopio and AlHajri",
     "tracks": ["efficient-ml"],
     "publication": "J12",
